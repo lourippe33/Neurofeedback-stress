@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import Benefits from "@/components/Benefits";
-import Process from "@/components/Process";
+import NeurofeedbackSection from "@/components/NeurofeedbackSection";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -15,8 +14,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <Benefits />
-      <Process />
+      <NeurofeedbackSection />
       <Pricing />
 
       {/* Blog preview */}

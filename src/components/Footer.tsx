@@ -31,7 +31,7 @@ export default function Footer() {
             <nav className="space-y-2">
               {[
                 { label: "Accueil", to: "/" },
-                { label: "Bienfaits", to: "/#bienfaits" },
+                { label: "Le Neurofeedback", to: "/#neurofeedback" },
                 { label: "Tarifs", to: "/tarifs" },
                 { label: "Blog", to: "/blog" },
                 { label: "À propos", to: "/a-propos" },

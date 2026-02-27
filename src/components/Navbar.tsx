@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Accueil", href: "/", isRoute: true },
-  { label: "Bienfaits", href: "/#bienfaits", isRoute: false },
-  { label: "La méthode", href: "/#processus", isRoute: false },
+  { label: "Le Neurofeedback", href: "/#neurofeedback", isRoute: false },
   { label: "Tarifs", href: "/tarifs", isRoute: true },
   { label: "Blog", href: "/blog", isRoute: true },
   { label: "À propos", href: "/a-propos", isRoute: true },
