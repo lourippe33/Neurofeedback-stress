@@ -83,41 +83,6 @@ Il agit en profondeur. Contrairement aux solutions qui masquent les difficultés
     `,
   },
   {
-    slug: "ameliorer-le-sommeil",
-    title: "Améliorer le sommeil grâce au neurofeedback NeurOptimal",
-    excerpt: "Le neurofeedback NeurOptimal est une méthode non invasive qui aide votre cerveau à s'autoréguler naturellement pour surmonter les déséquilibres pouvant perturber le sommeil.",
-    category: "Sommeil",
-    date: "Janvier 2025",
-    imageUrl: "https://neurofeedback-stress.fr/wp-content/uploads/2025/01/main_image_with_larger_logo_compressed-950x320.webp",
-    content: `
-## Améliorer le sommeil grâce au neurofeedback NeurOptimal
-
-### Une méthode naturelle pour un sommeil réparateur
-
-Le neurofeedback NeurOptimal est une méthode non invasive qui aide votre cerveau à s'autoréguler naturellement. En fournissant des informations en temps réel sur son activité, le cerveau apprend à mieux se gérer et à surmonter les déséquilibres pouvant perturber le sommeil.
-
-### Les troubles du sommeil : un problème courant
-
-Les troubles du sommeil touchent une large part de la population. Insomnie, réveils fréquents, sommeil non réparateur... Ces problèmes ont des conséquences directes sur la santé physique et mentale.
-
-Les causes sont multiples : stress, anxiété, dérèglement du rythme circadien, hyperactivité cérébrale nocturne...
-
-### Le neurofeedback : une approche de fond
-
-Contrairement aux somnifères qui masquent les symptômes, le neurofeedback s'attaque aux **causes profondes** du mauvais sommeil. Il aide le cerveau à trouver lui-même son équilibre.
-
-La méthode NeurOptimal® est particulièrement douce : elle ne force pas le cerveau dans une direction, elle l'informe simplement de ses propres turbulences, lui permettant de s'autocorriger.
-
-### Témoignages
-
-Beaucoup de nos patients rapportent une amélioration significative de leur sommeil dès les premières séances. "Je dors enfin profondément pour la première fois depuis des années" — un retour fréquemment partagé.
-
-### Comment se déroule une séance orientée sommeil ?
-
-La séance dure environ **33 minutes**. Vous êtes assis confortablement, des capteurs sont posés sur votre cuir chevelu (sans injection ni stimulation électrique). Vous regardez un film ou écoutez de la musique pendant que le logiciel analyse votre activité cérébrale et envoie des micro-signaux à votre cerveau.
-    `,
-  },
-  {
     slug: "stress-au-travail",
     title: "Stress au Travail : Comment le Neurofeedback Peut Vous Aider",
     excerpt: "Le stress au travail est un phénomène de plus en plus répandu. Entre échéances, responsabilités et attentes, découvrez comment retrouver l'équilibre grâce au neurofeedback dynamique.",
