@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cities } from "@/components/LocalSEO";
@@ -5,6 +6,17 @@ import { MapPin, Phone } from "lucide-react";
 import CTAButtons from "@/components/CTAButtons";
 
 export default function ZonesPage() {
+  useEffect(() => {
+    document.title = "Neurofeedback à Bordeaux, Tresses, Gironde — Zones desservies | NeurOptimal®";
+    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!descTag) { descTag = document.createElement("meta"); descTag.name = "description"; document.head.appendChild(descTag); }
+    descTag.content = "Le cabinet Neurofeedback-Stress à Tresses accueille les personnes de Bordeaux, la Gironde et toute la Bordeaux Métropole. Séances de neurofeedback dynamique NeurOptimal® à 15 min de Bordeaux.";
+    let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalTag) { canonicalTag = document.createElement("link"); canonicalTag.rel = "canonical"; document.head.appendChild(canonicalTag); }
+    canonicalTag.href = "https://www.neurofeedback-stress.fr/zones";
+    return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

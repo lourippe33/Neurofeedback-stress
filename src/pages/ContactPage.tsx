@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+
+
 import { Link } from "react-router-dom";
 
 const practitioners = [
@@ -35,6 +37,17 @@ const practitioners = [
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", rgpd: false });
   const [sent, setSent] = useState(false);
+
+  useEffect(() => {
+    document.title = "Contact — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
+    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!descTag) { descTag = document.createElement("meta"); descTag.name = "description"; document.head.appendChild(descTag); }
+    descTag.content = "Contactez le cabinet Neurofeedback-Stress à Tresses (Gironde). Réservez votre séance découverte de neurofeedback dynamique NeurOptimal®. Tél : 07 82 38 66 21. Réponse sous 24h.";
+    let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalTag) { canonicalTag = document.createElement("link"); canonicalTag.rel = "canonical"; document.head.appendChild(canonicalTag); }
+    canonicalTag.href = "https://www.neurofeedback-stress.fr/contact";
+    return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

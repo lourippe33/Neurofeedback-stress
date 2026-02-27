@@ -1,8 +1,20 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 
 export default function PricingPage() {
+  useEffect(() => {
+    document.title = "Tarifs neurofeedback à Tresses, Bordeaux — Séance à 40 € | NeurOptimal®";
+    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!descTag) { descTag = document.createElement("meta"); descTag.name = "description"; document.head.appendChild(descTag); }
+    descTag.content = "Séance de neurofeedback dynamique NeurOptimal® à 40 € à Tresses, proche Bordeaux. Tarifs dégressifs, forfaits disponibles. Première séance découverte sans engagement.";
+    let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalTag) { canonicalTag = document.createElement("link"); canonicalTag.rel = "canonical"; document.head.appendChild(canonicalTag); }
+    canonicalTag.href = "https://www.neurofeedback-stress.fr/tarifs";
+    return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

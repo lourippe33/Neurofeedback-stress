@@ -122,14 +122,17 @@ export default function BlogPost() {
   const prev = articles[currentIndex - 1];
   const next = articles[currentIndex + 1];
 
-  // --- Dynamic meta tags ---
+  // --- Dynamic meta tags + canonical ---
   useEffect(() => {
     if (!article) return;
     const metaTitle = article.metaTitle || article.title;
     const metaDesc = article.metaDescription || article.excerpt;
+    const SITE_URL = "https://www.neurofeedback-stress.fr";
+    const canonicalUrl = `${SITE_URL}/blog/${article.slug}`;
 
     document.title = metaTitle;
 
+    // Meta description
     let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (!descTag) {
       descTag = document.createElement("meta");
@@ -138,10 +141,58 @@ export default function BlogPost() {
     }
     descTag.content = metaDesc;
 
-    // Clean up on unmount
+    // Canonical tag
+    let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = canonicalUrl;
+
+    // og:url
+    let ogUrlTag = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+    if (!ogUrlTag) {
+      ogUrlTag = document.createElement("meta");
+      ogUrlTag.setAttribute("property", "og:url");
+      document.head.appendChild(ogUrlTag);
+    }
+    ogUrlTag.content = canonicalUrl;
+
+    // og:title
+    let ogTitleTag = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
+    if (!ogTitleTag) {
+      ogTitleTag = document.createElement("meta");
+      ogTitleTag.setAttribute("property", "og:title");
+      document.head.appendChild(ogTitleTag);
+    }
+    ogTitleTag.content = metaTitle;
+
+    // og:description
+    let ogDescTag = document.querySelector<HTMLMetaElement>('meta[property="og:description"]');
+    if (!ogDescTag) {
+      ogDescTag = document.createElement("meta");
+      ogDescTag.setAttribute("property", "og:description");
+      document.head.appendChild(ogDescTag);
+    }
+    ogDescTag.content = metaDesc;
+
+    // og:image
+    const imageUrl = article.imageUrl?.startsWith("http")
+      ? article.imageUrl
+      : `${SITE_URL}${article.imageUrl}`;
+    let ogImageTag = document.querySelector<HTMLMetaElement>('meta[property="og:image"]');
+    if (!ogImageTag) {
+      ogImageTag = document.createElement("meta");
+      ogImageTag.setAttribute("property", "og:image");
+      document.head.appendChild(ogImageTag);
+    }
+    ogImageTag.content = imageUrl;
+
     return () => {
       document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance";
       if (descTag) descTag.content = "";
+      if (canonicalTag) canonicalTag.href = "https://www.neurofeedback-stress.fr/";
     };
   }, [article]);
 

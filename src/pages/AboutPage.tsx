@@ -1,8 +1,20 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Award, Heart, Users } from "lucide-react";
 
 export default function AboutPage() {
+  useEffect(() => {
+    document.title = "À propos — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
+    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!descTag) { descTag = document.createElement("meta"); descTag.name = "description"; document.head.appendChild(descTag); }
+    descTag.content = "Découvrez le cabinet Neurofeedback-Stress à Tresses (Gironde), proche Bordeaux. Accompagnement par la méthode NeurOptimal® pour retrouver équilibre, sérénité et bien-être naturellement.";
+    let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonicalTag) { canonicalTag = document.createElement("link"); canonicalTag.rel = "canonical"; document.head.appendChild(canonicalTag); }
+    canonicalTag.href = "https://www.neurofeedback-stress.fr/a-propos";
+    return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
