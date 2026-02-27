@@ -271,6 +271,8 @@ export default function BlogPost() {
                   ? "Envie de retrouver un sommeil qui vous ressource vraiment ?"
                   : article.slug === "neurofeedback-stress-travail"
                   ? "Prêt à retrouver votre équilibre au travail ?"
+                  : article.slug === "neurofeedback-stress-angoisses-nuits-difficiles"
+                  ? "Prêt à retrouver calme et légèreté au quotidien ?"
                   : "Envie d'en savoir plus ?"}
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 mb-6">
@@ -278,6 +280,8 @@ export default function BlogPost() {
                   ? "Si les nuits difficiles font partie de votre quotidien depuis un moment, le neurofeedback dynamique peut être une piste sérieuse à explorer."
                   : article.slug === "neurofeedback-stress-travail"
                   ? "Le stress au travail n'est pas une fatalité. Le neurofeedback dynamique peut vous accompagner à retrouver calme, concentration et énergie — durablement."
+                  : article.slug === "neurofeedback-stress-angoisses-nuits-difficiles"
+                  ? "Stress, angoisses, nuits agitées... Le neurofeedback dynamique peut vous accompagner à briser ce cercle naturellement et durablement."
                   : "Prenez rendez-vous pour une séance découverte — sans engagement."}
               </p>
               <Link
@@ -286,7 +290,7 @@ export default function BlogPost() {
               >
                 {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
                   ? "Découvrir l'accompagnement →"
-                  : article.slug === "neurofeedback-stress-travail"
+                  : article.slug === "neurofeedback-stress-travail" || article.slug === "neurofeedback-stress-angoisses-nuits-difficiles"
                   ? "Réserver une séance découverte →"
                   : "Réserver une séance"}
               </Link>

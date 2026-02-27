@@ -30,6 +30,7 @@ const App = () => (
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/blog/stress-au-travail" element={<Navigate to="/blog/neurofeedback-stress-travail" replace />} />
+          <Route path="/blog/stress-angoisses-insomnie" element={<Navigate to="/blog/neurofeedback-stress-angoisses-nuits-difficiles" replace />} />
           <Route path="/tarifs" element={<PricingPage />} />
           <Route path="/zones" element={<ZonesPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
