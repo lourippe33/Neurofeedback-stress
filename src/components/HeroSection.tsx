@@ -1,5 +1,6 @@
 import heroBrain from "@/assets/hero-brain.jpg";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -7,7 +8,6 @@ export default function Hero() {
       id="accueil"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={heroBrain}
@@ -17,7 +17,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(185_60%_10%/0.75)] via-[hsl(185_60%_10%/0.55)] to-[hsl(185_60%_10%/0.85)]" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
           <span className="font-body text-xs tracking-[0.35em] uppercase text-primary-foreground/60 mb-6 inline-block">
@@ -45,12 +44,12 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0"
           style={{ animationDelay: "0.8s" }}
         >
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="font-body text-sm tracking-wide px-8 py-4 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all duration-300 shadow-lg"
           >
             Réserver une séance
-          </a>
+          </Link>
           <a
             href="#processus"
             className="font-body text-sm tracking-wide px-8 py-4 rounded-full border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
@@ -60,7 +59,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <a
         href="#bienfaits"
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/50 hover:text-primary-foreground transition-colors animate-bounce"

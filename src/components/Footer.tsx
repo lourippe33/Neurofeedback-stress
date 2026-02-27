@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-foreground py-12">
@@ -12,14 +14,19 @@ export default function Footer() {
             </div>
           </div>
           <nav className="flex flex-wrap gap-6 justify-center">
-            {["Accueil", "Bienfaits", "La méthode", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+            {[
+              { label: "Accueil", to: "/" },
+              { label: "Blog", to: "/blog" },
+              { label: "À propos", to: "/a-propos" },
+              { label: "Contact", to: "/contact" },
+            ].map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
                 className="font-body text-xs text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors tracking-wide"
               >
-                {item}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </nav>
           <div className="font-body text-xs text-primary-foreground/30">
