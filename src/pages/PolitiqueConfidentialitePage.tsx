@@ -21,40 +21,50 @@ export default function PolitiqueConfidentialitePage() {
       </section>
       <section className="py-16 bg-background flex-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <PolicySection title="Qui sommes-nous ?">
-            <p>Le site <strong className="text-foreground">neurofeedback-stress.fr</strong> est édité par Eric GATA, cabinet Neurofeedback-Stress, 9 galerie marchande, 33370 Tresses.</p>
-            <p>Contact DPO : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
+
+          <PolicySection title="1. Responsable du traitement">
+            <p>Eric GATA, 9 galerie marchande, 33370 Tresses.</p>
+            <p>Contact : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
           </PolicySection>
 
-          <PolicySection title="Données collectées">
-            <p>Lorsque vous utilisez le formulaire de contact, nous collectons : votre nom, votre adresse email, votre numéro de téléphone (optionnel) et le contenu de votre message.</p>
-            <p>Ces données sont utilisées <strong className="text-foreground">uniquement pour vous recontacter</strong> suite à votre demande. Elles ne sont jamais transmises à des tiers ni utilisées à des fins publicitaires.</p>
+          <PolicySection title="2. Données collectées et finalités">
+            <ul className="list-disc ml-5 space-y-2">
+              <li><strong className="text-foreground">Formulaire de contact</strong> : Nom, email, téléphone. Utilisés uniquement pour répondre à vos demandes.</li>
+              <li><strong className="text-foreground">Prise de rendez-vous</strong> : Historique des séances, objectifs de bien-être. Ces données sont nécessaires au suivi personnalisé.</li>
+              <li><strong className="text-foreground">Cookies</strong> : Analyse d'audience et fonctionnement du site.</li>
+            </ul>
           </PolicySection>
 
-          <PolicySection title="Cookies">
-            <p>Le site peut utiliser des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie publicitaire ou de traçage n'est utilisé sans votre consentement explicite.</p>
-            <p>Si vous déposez un commentaire sur notre site, il vous sera proposé d'enregistrer votre nom, adresse e-mail dans des cookies pour votre confort. Ces cookies expirent au bout d'un an.</p>
-            <p>Les cookies sont conservés pour une durée maximale de 13 mois.</p>
+          <PolicySection title="3. Base légale">
+            <p>Le traitement de vos données repose sur votre <strong className="text-foreground">consentement</strong> (formulaire) et sur l'<strong className="text-foreground">exécution du contrat</strong> de prestation de service (suivi des séances).</p>
           </PolicySection>
 
-          <PolicySection title="Contenu embarqué depuis d'autres sites">
-            <p>Les articles de ce site peuvent inclure des contenus intégrés (images, vidéos…). Ces contenus se comportent comme si le visiteur se rendait directement sur l'autre site. Ces sites peuvent collecter des données, utiliser des cookies ou embarquer des outils de suivi.</p>
+          <PolicySection title="4. Données de bien-être et confidentialité">
+            <p>Bien que le Neurofeedback ne soit pas médical, les informations partagées sur votre état général (sommeil, stress) sont considérées comme sensibles. Elles sont traitées avec la plus stricte confidentialité et ne sont <strong className="text-foreground">jamais cédées à des tiers</strong>.</p>
           </PolicySection>
 
-          <PolicySection title="Durées de stockage de vos données">
-            <p>Les messages reçus via le formulaire de contact sont conservés le temps nécessaire à leur traitement, et au maximum 3 ans.</p>
-            <p>Vous pouvez à tout moment demander la suppression de vos données en contactant : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
+          <PolicySection title="5. Durées de conservation">
+            <ul className="list-disc ml-5 space-y-1">
+              <li><strong className="text-foreground">Données de contact</strong> : 3 ans après le dernier échange.</li>
+              <li><strong className="text-foreground">Données de suivi client</strong> : 5 ans après la fin de l'accompagnement.</li>
+              <li><strong className="text-foreground">Cookies</strong> : 13 mois maximum.</li>
+            </ul>
           </PolicySection>
 
-          <PolicySection title="Vos droits">
-            <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition sur vos données personnelles.</p>
-            <p>Pour exercer ces droits ou pour toute question relative à la protection de vos données, contactez : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
+          <PolicySection title="6. Vos droits">
+            <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, de suppression et de portabilité de vos données. Vous pouvez retirer votre consentement à tout moment en écrivant à :</p>
+            <p><a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
             <p>Vous pouvez également introduire une réclamation auprès de la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.cnil.fr</a></p>
           </PolicySection>
 
-          <PolicySection title="Où vos données sont-elles envoyées ?">
-            <p>Les données transmises via le formulaire de contact sont destinées exclusivement à Eric GATA, responsable du cabinet Neurofeedback-Stress. Elles ne sont pas transmises à des sous-traitants ou des partenaires commerciaux.</p>
+          <PolicySection title="7. Sécurité">
+            <p>Le site dispose d'un certificat SSL (HTTPS) et les accès aux données clients sont sécurisés par mot de passe complexe.</p>
           </PolicySection>
+
+          <PolicySection title="8. Contenu embarqué depuis d'autres sites">
+            <p>Les articles de ce site peuvent inclure des contenus intégrés (images, vidéos…). Ces contenus se comportent comme si le visiteur se rendait directement sur l'autre site. Ces sites peuvent collecter des données, utiliser des cookies ou embarquer des outils de suivi.</p>
+          </PolicySection>
+
         </div>
       </section>
       <Footer />

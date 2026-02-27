@@ -21,53 +21,46 @@ export default function MentionsLegalesPage() {
       </section>
       <section className="py-16 bg-background flex-1">
         <div className="container mx-auto px-6 max-w-3xl">
-          <LegalSection title="1 – Édition du site">
-            <p>Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site les informations suivantes :</p>
+          <p className="font-body text-sm text-muted-foreground leading-relaxed mb-10">
+            Conformément aux dispositions de l'article 6 de la Loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), il est précisé l'identité des intervenants du site :
+          </p>
+
+          <LegalSection title="1 – Identité de l'éditeur">
             <ul className="list-disc ml-5 space-y-1">
-              <li><strong className="text-foreground">Propriétaire du site</strong> : Eric GATA</li>
-              <li>Contact : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a> – <a href="tel:+33782386621" className="text-primary hover:underline">07 82 38 66 21</a></li>
-              <li>Adresse : 9 galerie marchande, 33370 Tresses</li>
-            </ul>
-            <ul className="list-disc ml-5 space-y-1 mt-3">
-              <li><strong className="text-foreground">Statut juridique</strong> : EI (Entreprise Individuelle)</li>
+              <li><strong className="text-foreground">Propriétaire</strong> : Eric GATA – Entreprise Individuelle (EI)</li>
               <li><strong className="text-foreground">Nom commercial</strong> : Neurofeedback-Stress</li>
+              <li><strong className="text-foreground">Adresse</strong> : 9 galerie marchande, 33370 Tresses</li>
               <li><strong className="text-foreground">SIREN</strong> : 813 904 729</li>
-              <li><strong className="text-foreground">RCS</strong> : Bordeaux</li>
+              <li><strong className="text-foreground">RCS</strong> : Inscrit au Registre du Commerce et des Sociétés de Bordeaux</li>
+              <li><strong className="text-foreground">Contact</strong> : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a> | <a href="tel:+33782386621" className="text-primary hover:underline">07 82 38 66 21</a></li>
               <li><strong className="text-foreground">Directeur de la publication</strong> : Eric GATA</li>
             </ul>
-            <p className="mt-3"><strong className="text-foreground">Hébergeur</strong> : OVH SAS — 2 rue Kellermann, BP 80157, 59053 Roubaix Cedex 1 — Tél. : 1007</p>
-            <p><strong className="text-foreground">Délégué à la protection des données (DPO)</strong> : Pour toute demande relative aux données personnelles, contactez Eric GATA à l'adresse : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a>.</p>
           </LegalSection>
 
-          <LegalSection title="2 – Propriété intellectuelle et contrefaçons">
+          <LegalSection title="2 – Hébergeur">
+            <p>OVH SAS – 2 rue Kellermann, 59100 Roubaix (Tél : 1007)</p>
+          </LegalSection>
+
+          <LegalSection title="3 – Délégué à la Protection des Données (DPO)">
+            <p>Eric GATA – <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
+          </LegalSection>
+
+          <LegalSection title="4 – Propriété intellectuelle et contrefaçons">
             <p>Eric GATA est propriétaire des droits de propriété intellectuelle et détient les droits d'usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logos, vidéos, architecture, icônes et sons.</p>
             <p>Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Eric GATA.</p>
           </LegalSection>
 
-          <LegalSection title="3 – Limitations de responsabilité">
+          <LegalSection title="5 – Limitations de responsabilité">
             <p>Eric GATA ne pourra être tenu pour responsable des dommages directs ou indirects causés au matériel de l'utilisateur lors de l'accès au site.</p>
             <p>Eric GATA décline toute responsabilité quant à l'utilisation qui pourrait être faite des informations et des contenus présents sur le site.</p>
           </LegalSection>
 
-          <LegalSection title="4 – CNIL et gestion des données personnelles">
-            <p>Conformément à la loi 78-17 du 6 janvier 1978 modifiée et au RGPD, vous disposez des droits suivants :</p>
-            <ul className="list-disc ml-5 space-y-1">
-              <li><strong className="text-foreground">Droit d'accès</strong> : Obtenir une copie des données vous concernant.</li>
-              <li><strong className="text-foreground">Droit de rectification</strong> : Corriger les données inexactes ou incomplètes.</li>
-              <li><strong className="text-foreground">Droit à l'effacement</strong> : Demander la suppression de vos données.</li>
-              <li><strong className="text-foreground">Droit à la limitation</strong> : Restreindre temporairement l'utilisation de vos données.</li>
-              <li><strong className="text-foreground">Droit à la portabilité</strong> : Recevoir vos données dans un format lisible par machine.</li>
-              <li><strong className="text-foreground">Droit d'opposition</strong> : Vous opposer au traitement de vos données.</li>
-            </ul>
-            <p>Pour exercer ces droits : <a href="mailto:eric.gata@gmail.com" className="text-primary hover:underline">eric.gata@gmail.com</a></p>
-          </LegalSection>
-
-          <LegalSection title="5 – Liens hypertextes et cookies">
+          <LegalSection title="6 – Liens hypertextes et cookies">
             <p>Le site peut contenir des liens vers d'autres sites. Eric GATA décline toute responsabilité concernant le contenu de ces sites externes.</p>
-            <p>Le site peut utiliser des cookies pour améliorer l'expérience utilisateur. Aucun cookie non essentiel n'est installé sans votre consentement explicite. Les cookies sont conservés pour une durée maximale de 13 mois.</p>
+            <p>Le site peut utiliser des cookies techniques nécessaires à son bon fonctionnement. Les cookies sont conservés pour une durée maximale de 13 mois.</p>
           </LegalSection>
 
-          <LegalSection title="6 – Droit applicable">
+          <LegalSection title="7 – Droit applicable">
             <p>Tout litige en relation avec l'utilisation du site est soumis au droit français. Attribution exclusive de juridiction aux tribunaux compétents de Bordeaux.</p>
           </LegalSection>
         </div>
