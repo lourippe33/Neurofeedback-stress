@@ -15,7 +15,6 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <NeurofeedbackSection />
-      <Pricing />
 
       {/* Blog preview */}
       <section className="py-24 bg-gradient-section">
