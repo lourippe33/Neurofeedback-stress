@@ -8,6 +8,7 @@ const navItems = [
   { label: "Tarifs", href: "/tarifs", isRoute: true },
   { label: "Blog", href: "/blog", isRoute: true },
   { label: "À propos", href: "/a-propos", isRoute: true },
+  { label: "Contact", href: "/contact", isRoute: true },
 ];
 
 export default function Navbar() {
