@@ -1,6 +1,6 @@
 import heroBrain from "@/assets/hero-brain.jpg";
 import { ArrowDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import CTAButtons from "@/components/CTAButtons";
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroBrain}
-          alt="Neurofeedback NeurOptimal"
+          alt="Neurofeedback NeurOptimal Tresses Bordeaux"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(185_60%_10%/0.75)] via-[hsl(185_60%_10%/0.55)] to-[hsl(185_60%_10%/0.85)]" />
@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
           <span className="font-body text-xs tracking-[0.35em] uppercase text-primary-foreground/60 mb-6 inline-block">
-            Méthode NeurOptimal® Dynamique
+            Méthode NeurOptimal® Dynamique · Tresses, Gironde
           </span>
         </div>
 
@@ -37,25 +37,14 @@ export default function Hero() {
           className="font-body text-lg md:text-xl font-light text-primary-foreground/75 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up opacity-0"
           style={{ animationDelay: "0.6s" }}
         >
-          Le neurofeedback entraîne votre cerveau à s'autoréguler. Réduisez le stress, retrouvez un sommeil réparateur et améliorez votre concentration — naturellement.
+          Le neurofeedback entraîne votre cerveau à s'autoréguler. Réduisez le stress, retrouvez un sommeil réparateur et améliorez votre concentration — naturellement. Cabinet à Tresses, proche Bordeaux.
         </p>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0"
+          className="flex justify-center animate-fade-up opacity-0"
           style={{ animationDelay: "0.8s" }}
         >
-          <Link
-            to="/contact"
-            className="font-body text-sm tracking-wide px-8 py-4 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all duration-300 shadow-lg"
-          >
-            Réserver une séance
-          </Link>
-          <a
-            href="#processus"
-            className="font-body text-sm tracking-wide px-8 py-4 rounded-full border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
-          >
-            Découvrir la méthode
-          </a>
+          <CTAButtons variant="light" size="lg" />
         </div>
       </div>
 

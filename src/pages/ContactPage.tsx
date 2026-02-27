@@ -1,14 +1,16 @@
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", rgpd: false });
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.rgpd) return;
     setSent(true);
   };
 
@@ -25,9 +27,26 @@ export default function ContactPage() {
           <h1 className="font-display text-6xl md:text-7xl font-light text-primary-foreground mb-6">
             Contact
           </h1>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-xl mx-auto">
-            Une question, une envie de commencer ? Nous vous répondons sous 24h.
+          <p className="font-body text-lg text-primary-foreground/70 max-w-xl mx-auto mb-8">
+            Une question, une envie de commencer ? Répondons-nous rapidement.
           </p>
+          {/* CTA direct */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="tel:+33782386621"
+              className="inline-flex items-center justify-center gap-2 rounded-full font-body text-sm tracking-wide px-8 py-4 bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all shadow-lg"
+            >
+              <Phone size={16} />
+              Appeler — 07 82 38 66 21
+            </a>
+            <a
+              href="mailto:eric.gata@gmail.com"
+              className="inline-flex items-center justify-center gap-2 rounded-full font-body text-sm tracking-wide px-8 py-4 border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all"
+            >
+              <Mail size={16} />
+              eric.gata@gmail.com
+            </a>
+          </div>
         </div>
       </section>
 
@@ -38,22 +57,27 @@ export default function ContactPage() {
 
             {/* Info */}
             <div>
-              <h2 className="font-display text-4xl font-light text-foreground mb-8">
-                Nous trouver
-              </h2>
+              <h2 className="font-display text-4xl font-light text-foreground mb-8">Nous trouver</h2>
               <div className="space-y-6 mb-10">
                 {[
-                  { icon: MapPin, label: "Adresse", value: "Tresses, 33370, Gironde" },
-                  { icon: Mail, label: "Email", value: "contact@neurofeedback-stress.fr" },
-                  { icon: Clock, label: "Horaires", value: "Lun–Ven : 9h–19h · Sam : 9h–13h" },
-                ].map(({ icon: Icon, label, value }) => (
+                  { icon: Phone, label: "Téléphone", value: "07 82 38 66 21", href: "tel:+33782386621" },
+                  { icon: Mail, label: "Email", value: "eric.gata@gmail.com", href: "mailto:eric.gata@gmail.com" },
+                  { icon: MapPin, label: "Adresse", value: "9 galerie marchande, 33370 Tresses\n(proche Bordeaux)", href: null },
+                  { icon: Clock, label: "Horaires", value: "Lun–Ven : 9h–19h · Sam : 9h–13h", href: null },
+                ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex gap-4 items-start">
                     <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-secondary flex items-center justify-center">
                       <Icon size={18} className="text-primary" />
                     </div>
                     <div>
                       <div className="font-body text-xs text-muted-foreground mb-1">{label}</div>
-                      <div className="font-body text-sm text-foreground">{value}</div>
+                      {href ? (
+                        <a href={href} className="font-body text-sm text-foreground hover:text-primary transition-colors">
+                          {value}
+                        </a>
+                      ) : (
+                        <div className="font-body text-sm text-foreground whitespace-pre-line">{value}</div>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -78,7 +102,7 @@ export default function ContactPage() {
                 <div className="bg-secondary rounded-2xl p-10 text-center">
                   <div className="font-display text-3xl font-semibold text-primary mb-3">Merci !</div>
                   <p className="font-body text-sm text-muted-foreground">
-                    Votre message a été envoyé. Nous vous répondrons dans les 24h.
+                    Votre message a bien été envoyé. Nous vous répondrons dans les 24h.
                   </p>
                 </div>
               ) : (
@@ -95,27 +119,46 @@ export default function ContactPage() {
                       <input
                         type={field.type}
                         placeholder={field.placeholder}
-                        value={formData[field.name as keyof typeof formData]}
+                        value={formData[field.name as keyof typeof formData] as string}
                         onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-muted border border-border font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
                       />
                     </div>
                   ))}
                   <div>
-                    <label className="font-body text-xs text-muted-foreground mb-2 block tracking-wide">
-                      Votre message
-                    </label>
+                    <label className="font-body text-xs text-muted-foreground mb-2 block tracking-wide">Votre message</label>
                     <textarea
-                      rows={5}
+                      rows={4}
                       placeholder="Décrivez votre situation ou posez vos questions..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-muted border border-border font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all resize-none"
                     />
                   </div>
+
+                  {/* RGPD */}
+                  <div className="flex items-start gap-3 bg-muted rounded-xl p-4">
+                    <input
+                      type="checkbox"
+                      id="rgpd"
+                      required
+                      checked={formData.rgpd}
+                      onChange={(e) => setFormData({ ...formData, rgpd: e.target.checked })}
+                      className="mt-0.5 flex-shrink-0 w-4 h-4 accent-primary cursor-pointer"
+                    />
+                    <label htmlFor="rgpd" className="font-body text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                      J'accepte que mes informations soient utilisées pour me recontacter. Aucune publicité.{" "}
+                      <Link to="/politique-confidentialite" className="text-primary hover:underline">
+                        Voir la politique de confidentialité
+                      </Link>.{" "}
+                      <span className="text-destructive">*</span>
+                    </label>
+                  </div>
+
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-primary text-primary-foreground font-body text-sm tracking-wide hover:bg-accent transition-colors duration-300"
+                    className="w-full py-4 rounded-full bg-primary text-primary-foreground font-body text-sm tracking-wide hover:bg-accent transition-colors duration-300 disabled:opacity-50"
+                    disabled={!formData.rgpd}
                   >
                     Envoyer le message
                   </button>
