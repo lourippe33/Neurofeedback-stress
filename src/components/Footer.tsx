@@ -51,6 +51,7 @@ export default function Footer() {
               {[
                 { label: "Zones desservies", to: "/zones" },
                 { label: "Mentions légales", to: "/mentions-legales" },
+                { label: "CGV", to: "/cgv" },
                 { label: "Politique de confidentialité", to: "/politique-confidentialite" },
               ].map((item) => (
                 <Link key={item.to} to={item.to} className="block font-body text-xs text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors">
