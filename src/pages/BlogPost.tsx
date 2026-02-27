@@ -277,6 +277,8 @@ export default function BlogPost() {
                   ? "Vous traversez une période difficile ? Nous sommes là pour vous accompagner."
                   : article.slug === "neurofeedback-epuisement-retrouver-energie"
                   ? "Prêt à retrouver énergie, clarté et équilibre ?"
+                  : article.slug === "neurofeedback-concentration-ecrans-cerveau"
+                  ? "Prêt à retrouver un cerveau focus et efficace ?"
                   : "Envie d'en savoir plus ?"}
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 mb-6">
@@ -290,17 +292,15 @@ export default function BlogPost() {
                   ? "Le neurofeedback dynamique NeurOptimal® offre un espace de soutien doux et bienveillant pour retrouver calme, stabilité et sérénité — à votre rythme."
                   : article.slug === "neurofeedback-epuisement-retrouver-energie"
                   ? "L'épuisement profond n'est pas une fatalité. Le neurofeedback dynamique peut vous accompagner à retrouver votre équilibre naturellement — à votre rythme, en douceur."
+                  : article.slug === "neurofeedback-concentration-ecrans-cerveau"
+                  ? "La dispersion mentale n'est pas une fatalité. Le neurofeedback dynamique peut vous accompagner à retrouver concentration, clarté et énergie mentale — naturellement et durablement."
                   : "Prenez rendez-vous pour une séance découverte — sans engagement."}
               </p>
               <Link
                 to="/contact"
                 className="inline-block font-body text-sm px-8 py-3 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-colors"
               >
-                {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
-                  ? "Découvrir l'accompagnement →"
-                  : article.slug === "neurofeedback-stress-travail" || article.slug === "neurofeedback-stress-angoisses-nuits-difficiles"
-                  ? "Réserver une séance découverte →"
-                  : "Réserver une séance"}
+                Réserver une séance découverte →
               </Link>
             </div>
 

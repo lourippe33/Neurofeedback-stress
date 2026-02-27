@@ -437,4 +437,100 @@ Oui. Le neurofeedback est tout aussi pertinent pour les personnes qui sentent qu
 Oui. Le neurofeedback NeurOptimal® est une approche entièrement passive et non invasive, sans effets secondaires connus. Il convient aux adultes comme aux enfants.
     `,
   },
+  {
+    slug: "neurofeedback-concentration-ecrans-cerveau",
+    title: "Concentration en berne à cause des écrans : comment le neurofeedback peut vous aider à retrouver le focus",
+    metaTitle: "Concentration en berne à cause des écrans : comment le neurofeedback peut aider | neurofeedback-stress.fr",
+    metaDescription: "Impossible de rester concentré plus de quelques minutes ? Les écrans épuisent le cerveau. Découvrez comment le neurofeedback dynamique NeurOptimal® aide à retrouver focus et clarté mentale.",
+    excerpt: "Vous commencez une tâche et dix minutes plus tard vous êtes sur votre téléphone sans savoir comment vous y êtes arrivé. Vous relisez la même phrase trois fois sans la retenir. Vous finissez la journée épuisé alors que vous avez l'impression de n'avoir rien accompli vraiment. Ce n'est pas un manque de volonté — c'est un cerveau saturé. Et le neurofeedback dynamique NeurOptimal® peut l'aider à retrouver son focus naturellement.",
+    category: "Concentration",
+    date: "Février 2025",
+    imageUrl: "/images/neurofeedback-concentration-ecrans-cerveau.jpg",
+    imageAlt: "Personne fatiguée face à un écran illustrant les difficultés de concentration liées aux écrans accompagnées par le neurofeedback dynamique NeurOptimal®",
+    content: `
+On passe en moyenne plus de 7 heures par jour devant un écran. Ordinateur, téléphone, télévision — le cerveau est en permanence sollicité, interrompu, sollicité à nouveau. À force, il ne sait plus comment maintenir une attention profonde et durable.
+
+Le résultat ? Une concentration qui s'effrite, une mémoire qui flanche, une fatigue mentale qui s'installe dès le matin. Et une frustration croissante de ne plus être aussi efficace qu'avant.
+
+## Ce que les écrans font vraiment à notre capacité de concentration
+
+Les écrans ne sont pas neutres pour le cerveau. La stimulation constante, les notifications, le défilement infini des réseaux sociaux — tout cela entraîne le cerveau à fonctionner en mode réactif permanent.
+
+Ce que beaucoup de personnes hyper-connectées décrivent :
+
+- Une incapacité à rester concentré plus de quelques minutes sur une seule tâche
+- Une tendance à la dispersion — passer d'une chose à l'autre sans vraiment finir
+- Une fatigue mentale qui s'installe tôt dans la journée
+- Des difficultés à lire un texte long ou à suivre une conversation sans décrocher
+- Une mémoire moins fiable — on oublie ce qu'on vient de lire ou d'entendre
+- Un sentiment de saturation en fin de journée malgré peu de résultats concrets
+
+Ce n'est pas une question de volonté ou d'intelligence. C'est un cerveau qui a été entraîné malgré lui à fonctionner en mode dispersion — et qui a besoin d'aide pour retrouver sa capacité naturelle à se concentrer.
+
+## Pourquoi se déconnecter ne suffit pas toujours
+
+La tentation est grande de penser qu'un week-end sans écran suffira à tout régler. Et si le repos aide effectivement, pour beaucoup de personnes le problème persiste même après des vacances ou une vraie coupure digitale.
+
+C'est parce que le cerveau a intégré ce mode de fonctionnement dispersé. Il a besoin d'un accompagnement actif pour retrouver sa capacité à maintenir une attention profonde — pas seulement d'une pause.
+
+## Le neurofeedback : ré-entraîner le cerveau à se concentrer
+
+Le neurofeedback NeurOptimal® est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
+
+Le cerveau, naturellement orienté vers l'efficacité, s'ajuste alors de lui-même. **Sans effort conscient. Sans médicaments. Sans dépendance.**
+
+C'est exactement l'inverse de ce que font les écrans : au lieu de fragmenter l'attention, le neurofeedback entraîne le cerveau à retrouver des états de concentration stables et durables.
+
+Chaque séance dure 33 minutes dans un cadre entièrement relaxant.
+
+## Ce que le neurofeedback apporte concrètement pour la concentration
+
+En accompagnant le cerveau à mieux s'autoréguler, le neurofeedback aide progressivement à :
+
+- **Maintenir l'attention plus longtemps** sur une tâche sans se disperser
+- **Retrouver une clarté mentale** — les idées s'organisent mieux, la mémoire se fiabilise
+- **Réduire la fatigue mentale** en fin de journée
+- **Diminuer le besoin compulsif** de vérifier son téléphone ou de changer de tâche
+- **Retrouver le plaisir de la lecture** ou d'une activité qui demande de la profondeur
+- **Être plus présent** dans les conversations et les moments du quotidien
+
+Les effets ne se limitent pas au travail — une meilleure concentration impacte positivement toute la qualité de vie.
+
+## Ce que vivent les personnes accompagnées
+
+Les personnes qui ont suivi un parcours de neurofeedback pour des difficultés de concentration témoignent souvent de :
+
+- Une capacité retrouvée à rester dans la tâche sans chercher constamment à se distraire
+- Un esprit plus calme et moins encombré au quotidien
+- Une productivité améliorée avec moins d'efforts
+- Un sommeil de meilleure qualité — le cerveau moins en surchauffe le soir
+- Un rapport plus serein aux écrans — moins de compulsion, plus de choix
+
+"Je relisais la même phrase en boucle sans la retenir. Après une dizaine de séances, j'ai retrouvé une concentration que je n'avais plus connue depuis des années."
+
+"Je finissais mes journées épuisé sans avoir l'impression d'avoir vraiment travaillé. Maintenant je fais moins mais j'accomplis vraiment plus."
+
+Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements durables.
+
+## FAQ — Vos questions sur le neurofeedback et la concentration
+
+? Le neurofeedback peut-il vraiment améliorer la concentration ?
+Oui. La difficulté à se concentrer est souvent liée à un cerveau qui fonctionne en mode dispersion permanente. Le neurofeedback l'accompagne à retrouver des états d'attention stables et durables — naturellement, sans effort conscient de votre part.
+
+? Est-ce efficace même si j'utilise encore beaucoup les écrans ?
+Oui. Le neurofeedback ne demande pas d'arrêter les écrans. Il renforce la capacité du cerveau à résister à la dispersion, ce qui améliore naturellement votre rapport aux écrans et votre capacité à choisir quand vous les utilisez.
+
+? Combien de séances sont nécessaires pour retrouver de la concentration ?
+Les premiers changements sont souvent perçus entre la 5e et la 10e séance. Un parcours de 20 à 30 séances permet d'ancrer des améliorations durables. Chaque cerveau étant unique, le rythme peut varier.
+
+? Est-ce adapté aux étudiants en période d'examens ?
+Tout à fait. Le neurofeedback est particulièrement pertinent pour les étudiants qui cherchent à optimiser leur capacité d'apprentissage et de mémorisation naturellement, sans recourir à des stimulants.
+
+? Peut-on combiner le neurofeedback avec d'autres pratiques pour améliorer la concentration ?
+Absolument. Le neurofeedback se combine très bien avec une réduction volontaire des écrans le soir, la méditation, le sport ou des techniques de gestion du temps. Il en renforce généralement les effets.
+
+? Est-ce sans risque ?
+Oui. Le neurofeedback NeurOptimal® est une approche entièrement passive et non invasive, sans effets secondaires connus. Il convient aux adultes comme aux enfants et adolescents.
+    `,
+  },
 ];
