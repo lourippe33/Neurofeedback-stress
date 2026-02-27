@@ -75,9 +75,6 @@ export default function NeurofeedbackSection() {
       <div className="py-28 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 inline-block">
-              Pour qui ?
-            </span>
             <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
               Les bienfaits du
               <br />
