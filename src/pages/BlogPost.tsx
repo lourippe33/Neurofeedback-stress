@@ -4,14 +4,62 @@ import { articles } from "@/data/articles";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+function bold(text: string) {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>');
+}
+
 function renderContent(content: string) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
   let i = 0;
 
+  // Detect FAQ section
+  const faqStartIndex = lines.findIndex(l => l.trim().startsWith("## FAQ"));
+
   while (i < lines.length) {
     const line = lines[i].trim();
     if (!line) { i++; continue; }
+
+    // FAQ block
+    if (i === faqStartIndex) {
+      const faqItems: { q: string; a: string }[] = [];
+      i++; // skip the FAQ h2 line, we'll render it separately
+      while (i < lines.length) {
+        const fl = lines[i].trim();
+        if (fl.startsWith("? ")) {
+          const q = fl.slice(2);
+          i++;
+          const answerLines: string[] = [];
+          while (i < lines.length && lines[i].trim() && !lines[i].trim().startsWith("? ")) {
+            answerLines.push(lines[i].trim());
+            i++;
+          }
+          faqItems.push({ q, a: answerLines.join(" ") });
+        } else {
+          i++;
+        }
+      }
+      elements.push(
+        <div key="faq" className="mt-10">
+          <h2 className="font-display text-3xl font-light text-foreground mb-6">FAQ — Vos questions sur le neurofeedback et le sommeil</h2>
+          <div className="space-y-4">
+            {faqItems.map((item, j) => (
+              <details key={j} className="group bg-card border border-border rounded-2xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-body text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  <span>{item.q}</span>
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full border border-border flex items-center justify-center text-muted-foreground group-open:rotate-45 transition-transform duration-200 text-base leading-none">+</span>
+                </summary>
+                <div className="px-6 pb-5">
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: bold(item.a) }} />
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      );
+      continue;
+    }
+
     if (line.startsWith("### ")) {
       elements.push(<h3 key={i} className="font-display text-2xl font-semibold text-foreground mt-8 mb-3">{line.slice(4)}</h3>);
     } else if (line.startsWith("## ")) {
@@ -27,15 +75,14 @@ function renderContent(content: string) {
           {items.map((item, j) => (
             <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-              <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>') }} />
+              <span dangerouslySetInnerHTML={{ __html: bold(item) }} />
             </li>
           ))}
         </ul>
       );
       continue;
     } else {
-      const html = line.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>');
-      elements.push(<p key={i} className="font-body text-sm text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: html }} />);
+      elements.push(<p key={i} className="font-body text-sm text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: bold(line) }} />);
     }
     i++;
   }
@@ -66,7 +113,7 @@ export default function BlogPost() {
 
       {/* Hero image */}
       <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-        <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover" />
+        <img src={article.imageUrl} alt={article.imageAlt || article.title} title={article.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(185_60%_10%/0.8)] via-[hsl(185_60%_10%/0.4)] to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 container mx-auto px-6 pb-12">
           <Link to="/blog" className="inline-flex items-center gap-2 font-body text-xs text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors">
@@ -99,16 +146,22 @@ export default function BlogPost() {
             {/* CTA */}
             <div className="mt-16 bg-gradient-cta rounded-3xl p-10 text-center">
               <h3 className="font-display text-3xl font-light text-primary-foreground mb-3">
-                Envie d'en savoir plus ?
+                {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
+                  ? "Envie de retrouver un sommeil qui vous ressource vraiment ?"
+                  : "Envie d'en savoir plus ?"}
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 mb-6">
-                Prenez rendez-vous pour une séance découverte — sans engagement.
+                {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
+                  ? "Si les nuits difficiles font partie de votre quotidien depuis un moment, le neurofeedback dynamique peut être une piste sérieuse à explorer."
+                  : "Prenez rendez-vous pour une séance découverte — sans engagement."}
               </p>
               <Link
                 to="/contact"
                 className="inline-block font-body text-sm px-8 py-3 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-colors"
               >
-                Réserver une séance
+                {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
+                  ? "Découvrir l'accompagnement →"
+                  : "Réserver une séance"}
               </Link>
             </div>
 

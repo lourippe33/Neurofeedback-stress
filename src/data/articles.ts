@@ -5,52 +5,77 @@ export interface Article {
   category: string;
   date: string;
   imageUrl: string;
+  imageAlt?: string;
   content: string;
 }
 
 export const articles: Article[] = [
   {
-    slug: "neurofeedback-dynamique-sommeil",
-    title: "Neurofeedback dynamique et sommeil",
+    slug: "neurofeedback-sommeil-nuits-reparatrices",
+    title: "Neurofeedback et sommeil : comment retrouver des nuits vraiment réparatrices",
     excerpt: "Fatigue persistante, concentration difficile, émotions instables ? Ces symptômes sont souvent le signe d'un sommeil perturbé. Découvrez comment le neurofeedback peut vous aider à retrouver des nuits réparatrices.",
     category: "Sommeil",
     date: "Mars 2025",
-    imageUrl: "https://neurofeedback-stress.fr/wp-content/uploads/2025/03/mpho-mojapelo-I84vGUYGUtQ-unsplash-950x320.webp",
+    imageUrl: "/images/neurofeedback-dynamique-sommeil-reveil.jpg",
+    imageAlt: "Réveil rose sur fond sombre illustrant les difficultés de sommeil accompagnées par le neurofeedback dynamique NeurOptimal®",
     content: `
-## Retrouver un Sommeil Réparateur avec le Neurofeedback Dynamique
+Fatigue au réveil, difficultés à rester concentré dans la journée, émotions plus difficiles à gérer — ces signaux sont souvent le reflet d'un sommeil de mauvaise qualité. Pas forcément trop court, mais pas suffisamment profond ni récupérateur.
 
-Vous ressentez une fatigue constante malgré des nuits de sommeil apparemment longues ? Vous avez du mal à vous concentrer durant la journée, et vos émotions semblent plus difficiles à gérer qu'avant ?
+Le neurofeedback dynamique, et notamment le protocole NeurOptimal®, est une approche naturelle et non invasive qui accompagne le cerveau à retrouver un fonctionnement plus fluide… et des nuits plus reposantes.
 
-Ces symptômes sont souvent le signe d'un **sommeil de mauvaise qualité** — un problème qui touche des millions de personnes et qui peut avoir un impact profond sur la qualité de vie.
+## Pourquoi dormez-vous sans vraiment récupérer ?
 
-### Pourquoi le sommeil est-il si important ?
+Le sommeil est un moment clé pour le cerveau. C'est pendant la nuit qu'il "range", "nettoie" et se recharge. Mais quand le mental reste en état d'alerte — à cause du stress, des tensions accumulées ou d'un rythme de vie trop soutenu — le cerveau peine à lâcher prise complètement.
 
-Le sommeil n'est pas un simple état de repos. C'est une période d'activité intense pour le cerveau : consolidation des souvenirs, régulation hormonale, réparation cellulaire. Un sommeil perturbé signifie que ces processus vitaux ne peuvent pas s'accomplir pleinement.
+Résultat : vous passez des heures au lit sans atteindre ce repos profond dont vous avez besoin. C'est un problème très répandu, qui touche une grande partie de la population adulte en France.
 
-### Comment le Neurofeedback Dynamique améliore le sommeil
+## Qu'est-ce que le neurofeedback dynamique ?
 
-Le **Neurofeedback NeurOptimal®** travaille directement sur l'activité cérébrale. En fournissant au cerveau des informations en temps réel sur ses propres patterns, il lui permet de :
+Le neurofeedback est une approche d'entraînement cérébral naturelle. Des capteurs posés sur la tête lisent l'activité du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau de manière subtile.
 
-- **Reconnaître** les schémas dysfonctionnels qui perturbent le sommeil
-- **S'autoréguler** de manière naturelle, sans forcer
-- **Retrouver** un rythme veille-sommeil plus équilibré
+Le cerveau, naturellement orienté vers l'efficacité, ajuste alors son fonctionnement de lui-même, **sans effort de votre part**.
 
-### Les résultats observés
+Le protocole NeurOptimal® est une version avancée et entièrement personnalisée de cette approche : il s'adapte à chaque cerveau, séance après séance.
 
-Les personnes qui suivent un parcours de neurofeedback rapportent généralement :
+## Comment le neurofeedback peut-il améliorer votre sommeil ?
 
-- Un endormissement plus rapide
-- Moins de réveils nocturnes
-- Un sentiment de repos plus profond au réveil
+En accompagnant le cerveau à mieux s'autoréguler, le neurofeedback l'aide progressivement à :
+
+- **Mieux déconnecter le soir**, en réduisant l'état de vigilance ou d'agitation mentale qui empêche l'endormissement
+- **Entrer plus facilement dans un sommeil profond**, pour que la nuit soit vraiment récupératrice
+- **Maintenir un rythme veille-sommeil plus stable**, avec moins de réveils ou de phases d'éveil nocturne
+- **Se lever plus frais**, avec une énergie plus présente dès le matin
+
+Ce n'est pas une solution qui masque les difficultés. Le neurofeedback accompagne le cerveau à retrouver sa propre capacité à s'équilibrer — ce qui produit des effets durables.
+
+## Ce que vivent les personnes accompagnées
+
+Les personnes qui suivent un parcours de neurofeedback pour des difficultés de sommeil témoignent souvent de :
+
+- Un endormissement plus rapide et moins de ruminations le soir
+- Moins de réveils nocturnes, ou un retour au sommeil plus facile
+- Un réveil plus agréable, avec un sentiment de vrai repos
 - Plus d'énergie et de clarté mentale dans la journée
+- Une meilleure gestion du stress au quotidien
 
-Le neurofeedback n'est pas un traitement symptomatique — il agit en profondeur sur la capacité du cerveau à s'autoréguler, ce qui produit des effets durables.
+Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements dans la durée.
 
-### Combien de séances sont nécessaires ?
+## FAQ — Vos questions sur le neurofeedback et le sommeil
 
-Les premiers effets sur le sommeil sont souvent ressentis après **5 à 10 séances**. Un parcours complet de 20 à 30 séances permet généralement d'obtenir des améliorations durables.
+? Le neurofeedback peut-il aider en cas de difficultés de sommeil liées au stress ?
+Oui, c'est même l'un des profils où le neurofeedback donne de très bons résultats. Quand le cerveau est en état de tension ou d'hypervigilance, il a du mal à lâcher prise la nuit. Le neurofeedback l'accompagne à retrouver cet équilibre naturellement.
 
-Chaque cerveau étant unique, les résultats varient d'une personne à l'autre. L'important est de progresser à votre rythme.
+? Combien de séances sont nécessaires pour ressentir des effets ?
+Les premiers changements sont souvent perçus entre la 5e et la 10e séance. Pour des résultats stables et durables, un parcours de 20 à 30 séances est généralement recommandé. Chaque cerveau étant unique, le rythme de progression peut varier.
+
+? Est-ce que le neurofeedback NeurOptimal® est sans risque ?
+Oui. Il s'agit d'une approche passive et non invasive. Aucune impulsion n'est envoyée vers le cerveau — il reçoit simplement de l'information sur son propre fonctionnement. Il convient aussi bien aux adultes qu'aux enfants.
+
+? Peut-on combiner le neurofeedback avec d'autres approches pour mieux dormir ?
+Tout à fait. Le neurofeedback se combine très bien avec une bonne hygiène du sommeil (horaires réguliers, limitation des écrans le soir), la cohérence cardiaque ou d'autres pratiques de gestion du stress.
+
+? Le neurofeedback agit-il en profondeur ou uniquement sur les symptômes ?
+Il agit en profondeur. Contrairement aux solutions qui masquent les difficultés, le neurofeedback accompagne le cerveau à retrouver sa capacité naturelle à s'autoréguler — ce qui produit des effets qui se maintiennent dans le temps.
     `,
   },
   {
