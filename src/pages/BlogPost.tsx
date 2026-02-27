@@ -275,6 +275,8 @@ export default function BlogPost() {
                   ? "Prêt à retrouver calme et légèreté au quotidien ?"
                   : article.slug === "neurofeedback-bien-etre-epreuves-de-vie"
                   ? "Vous traversez une période difficile ? Nous sommes là pour vous accompagner."
+                  : article.slug === "neurofeedback-epuisement-retrouver-energie"
+                  ? "Prêt à retrouver énergie, clarté et équilibre ?"
                   : "Envie d'en savoir plus ?"}
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 mb-6">
@@ -286,6 +288,8 @@ export default function BlogPost() {
                   ? "Stress, angoisses, nuits agitées... Le neurofeedback dynamique peut vous accompagner à briser ce cercle naturellement et durablement."
                   : article.slug === "neurofeedback-bien-etre-epreuves-de-vie"
                   ? "Le neurofeedback dynamique NeurOptimal® offre un espace de soutien doux et bienveillant pour retrouver calme, stabilité et sérénité — à votre rythme."
+                  : article.slug === "neurofeedback-epuisement-retrouver-energie"
+                  ? "L'épuisement profond n'est pas une fatalité. Le neurofeedback dynamique peut vous accompagner à retrouver votre équilibre naturellement — à votre rythme, en douceur."
                   : "Prenez rendez-vous pour une séance découverte — sans engagement."}
               </p>
               <Link
