@@ -162,6 +162,47 @@ export default function BlogPost() {
       })
     : null;
 
+  // --- JSON-LD Article schema ---
+  const SITE_URL = "https://www.neurofeedback-stress.fr";
+
+  // Map human-readable dates to ISO format
+  const dateMap: Record<string, string> = {
+    "Mars 2025": "2025-03-01",
+    "Janvier 2025": "2025-01-01",
+    "Novembre 2024": "2024-11-01",
+    "Octobre 2024": "2024-10-01",
+    "Septembre 2024": "2024-09-01",
+  };
+  const isoDate = article ? (dateMap[article.date] ?? "2025-01-01") : "2025-01-01";
+
+  const articleJsonLd = article
+    ? JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": article.title,
+        "description": article.metaDescription || article.excerpt,
+        "image": article.imageUrl?.startsWith("http")
+          ? article.imageUrl
+          : `${SITE_URL}${article.imageUrl}`,
+        "datePublished": isoDate,
+        "dateModified": isoDate,
+        "url": `${SITE_URL}/blog/${article.slug}`,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `${SITE_URL}/blog/${article.slug}`,
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "neurofeedback-stress.fr",
+          "url": SITE_URL,
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "neurofeedback-stress.fr",
+        },
+      })
+    : null;
+
   if (!article) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -175,6 +216,13 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* JSON-LD Article schema.org */}
+      {articleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: articleJsonLd }}
+        />
+      )}
       {/* JSON-LD FAQPage schema.org */}
       {faqJsonLd && (
         <script
