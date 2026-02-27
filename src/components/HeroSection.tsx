@@ -1,0 +1,72 @@
+import heroBrain from "@/assets/hero-brain.jpg";
+import { ArrowDown } from "lucide-react";
+
+export default function Hero() {
+  return (
+    <section
+      id="accueil"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBrain}
+          alt="Neurofeedback NeurOptimal"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(185_60%_10%/0.75)] via-[hsl(185_60%_10%/0.55)] to-[hsl(185_60%_10%/0.85)]" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
+          <span className="font-body text-xs tracking-[0.35em] uppercase text-primary-foreground/60 mb-6 inline-block">
+            Méthode NeurOptimal® Dynamique
+          </span>
+        </div>
+
+        <h1
+          className="font-display text-6xl md:text-8xl font-light text-primary-foreground mb-6 leading-none animate-fade-up opacity-0"
+          style={{ animationDelay: "0.4s" }}
+        >
+          Retrouvez votre
+          <br />
+          <em className="font-light italic">équilibre intérieur</em>
+        </h1>
+
+        <p
+          className="font-body text-lg md:text-xl font-light text-primary-foreground/75 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up opacity-0"
+          style={{ animationDelay: "0.6s" }}
+        >
+          Le neurofeedback entraîne votre cerveau à s'autoréguler. Réduisez le stress, retrouvez un sommeil réparateur et améliorez votre concentration — naturellement.
+        </p>
+
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0"
+          style={{ animationDelay: "0.8s" }}
+        >
+          <a
+            href="#contact"
+            className="font-body text-sm tracking-wide px-8 py-4 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all duration-300 shadow-lg"
+          >
+            Réserver une séance
+          </a>
+          <a
+            href="#processus"
+            className="font-body text-sm tracking-wide px-8 py-4 rounded-full border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
+          >
+            Découvrir la méthode
+          </a>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <a
+        href="#bienfaits"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/50 hover:text-primary-foreground transition-colors animate-bounce"
+      >
+        <ArrowDown size={24} />
+      </a>
+    </section>
+  );
+}
