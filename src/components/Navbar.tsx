@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Bienfaits", href: "#bienfaits" },
-  { label: "Comment ça marche", href: "#processus" },
-  { label: "À propos", href: "#apropos" },
-  { label: "Contact", href: "#contact" },
+  { label: "Accueil", href: "/", isRoute: true },
+  { label: "Bienfaits", href: "/#bienfaits", isRoute: false },
+  { label: "La méthode", href: "/#processus", isRoute: false },
+  { label: "Blog", href: "/blog", isRoute: true },
+  { label: "À propos", href: "/a-propos", isRoute: true },
 ];
 
 export default function Navbar() {
@@ -28,7 +29,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#accueil" className="flex flex-col leading-none">
+        <Link to="/" className="flex flex-col leading-none">
           <span
             className={`font-display text-xl font-semibold tracking-wide transition-colors duration-500 ${
               scrolled ? "text-primary" : "text-primary-foreground"
@@ -43,22 +44,34 @@ export default function Navbar() {
           >
             Tresses · NeurOptimal®
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`font-body text-sm tracking-wide transition-colors duration-300 hover:opacity-70 ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`font-body text-sm tracking-wide transition-colors duration-300 hover:opacity-70 ${
+                  scrolled ? "text-foreground" : "text-primary-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className={`font-body text-sm tracking-wide transition-colors duration-300 hover:opacity-70 ${
+                  scrolled ? "text-foreground" : "text-primary-foreground"
+                }`}
+              >
+                {item.label}
+              </a>
+            )
+          )}
+          <Link
+            to="/contact"
             className={`font-body text-sm px-5 py-2 rounded-full border transition-all duration-300 ${
               scrolled
                 ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
@@ -66,7 +79,7 @@ export default function Navbar() {
             }`}
           >
             Réserver
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -79,24 +92,35 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden bg-card border-t border-border">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="block px-6 py-4 font-body text-sm text-foreground border-b border-border/50 hover:bg-muted transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.isRoute ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 font-body text-sm text-foreground border-b border-border/50 hover:bg-muted transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 font-body text-sm text-foreground border-b border-border/50 hover:bg-muted transition-colors"
+              >
+                {item.label}
+              </a>
+            )
+          )}
           <div className="p-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               onClick={() => setOpen(false)}
               className="block text-center font-body text-sm px-5 py-3 rounded-full bg-primary text-primary-foreground"
             >
               Réserver une séance
-            </a>
+            </Link>
           </div>
         </div>
       )}
