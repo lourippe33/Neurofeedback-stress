@@ -10,6 +10,7 @@ const categoryColors: Record<string, string> = {
   Anxiété: "bg-secondary text-primary",
   "Bien-être": "bg-secondary text-primary",
   "Burn-out": "bg-secondary text-primary",
+  Concentration: "bg-secondary text-primary",
 };
 
 export default function BlogPage() {
