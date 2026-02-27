@@ -42,7 +42,7 @@ function renderContent(content: string) {
       }
       elements.push(
         <div key="faq" className="mt-10">
-          <h2 className="font-display text-3xl font-light text-foreground mb-6">FAQ — Vos questions sur le neurofeedback et le sommeil</h2>
+          <h2 className="font-display text-3xl font-light text-foreground mb-6">FAQ — Vos questions sur le neurofeedback</h2>
           <div className="space-y-4">
             {faqItems.map((item, j) => (
               <details key={j} className="group bg-card border border-border rounded-2xl overflow-hidden">
@@ -269,11 +269,15 @@ export default function BlogPost() {
               <h3 className="font-display text-3xl font-light text-primary-foreground mb-3">
                 {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
                   ? "Envie de retrouver un sommeil qui vous ressource vraiment ?"
+                  : article.slug === "neurofeedback-stress-travail"
+                  ? "Prêt à retrouver votre équilibre au travail ?"
                   : "Envie d'en savoir plus ?"}
               </h3>
               <p className="font-body text-sm text-primary-foreground/70 mb-6">
                 {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
                   ? "Si les nuits difficiles font partie de votre quotidien depuis un moment, le neurofeedback dynamique peut être une piste sérieuse à explorer."
+                  : article.slug === "neurofeedback-stress-travail"
+                  ? "Le stress au travail n'est pas une fatalité. Le neurofeedback dynamique peut vous accompagner à retrouver calme, concentration et énergie — durablement."
                   : "Prenez rendez-vous pour une séance découverte — sans engagement."}
               </p>
               <Link
@@ -282,6 +286,8 @@ export default function BlogPost() {
               >
                 {article.slug === "neurofeedback-sommeil-nuits-reparatrices"
                   ? "Découvrir l'accompagnement →"
+                  : article.slug === "neurofeedback-stress-travail"
+                  ? "Réserver une séance découverte →"
                   : "Réserver une séance"}
               </Link>
             </div>
