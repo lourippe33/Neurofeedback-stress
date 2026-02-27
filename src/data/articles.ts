@@ -2,6 +2,8 @@ export interface Article {
   slug: string;
   title: string;
   excerpt: string;
+  metaTitle?: string;
+  metaDescription?: string;
   category: string;
   date: string;
   imageUrl: string;
@@ -13,6 +15,8 @@ export const articles: Article[] = [
   {
     slug: "neurofeedback-sommeil-nuits-reparatrices",
     title: "Neurofeedback et sommeil : comment retrouver des nuits vraiment réparatrices",
+    metaTitle: "Neurofeedback et sommeil : retrouver des nuits réparatrices naturellement | neurofeedback-stress.fr",
+    metaDescription: "Vous dormez mais vous vous réveillez épuisé ? Découvrez comment le neurofeedback NeurOptimal® peut vous aider à retrouver un sommeil plus profond et réparateur, naturellement.",
     excerpt: "Fatigue persistante, concentration difficile, émotions instables ? Ces symptômes sont souvent le signe d'un sommeil perturbé. Découvrez comment le neurofeedback peut vous aider à retrouver des nuits réparatrices.",
     category: "Sommeil",
     date: "Mars 2025",

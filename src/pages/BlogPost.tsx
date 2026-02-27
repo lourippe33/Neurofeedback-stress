@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { articles } from "@/data/articles";
@@ -89,12 +90,77 @@ function renderContent(content: string) {
   return elements;
 }
 
+// Extract FAQ items from article content
+function extractFaqItems(content: string): { q: string; a: string }[] {
+  const lines = content.trim().split("\n");
+  const faqStartIndex = lines.findIndex(l => l.trim().startsWith("## FAQ"));
+  if (faqStartIndex === -1) return [];
+  const items: { q: string; a: string }[] = [];
+  let i = faqStartIndex + 1;
+  while (i < lines.length) {
+    const fl = lines[i].trim();
+    if (fl.startsWith("? ")) {
+      const q = fl.slice(2);
+      i++;
+      const answerLines: string[] = [];
+      while (i < lines.length && lines[i].trim() && !lines[i].trim().startsWith("? ")) {
+        answerLines.push(lines[i].trim());
+        i++;
+      }
+      items.push({ q, a: answerLines.join(" ") });
+    } else {
+      i++;
+    }
+  }
+  return items;
+}
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a) => a.slug === slug);
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const prev = articles[currentIndex - 1];
   const next = articles[currentIndex + 1];
+
+  // --- Dynamic meta tags ---
+  useEffect(() => {
+    if (!article) return;
+    const metaTitle = article.metaTitle || article.title;
+    const metaDesc = article.metaDescription || article.excerpt;
+
+    document.title = metaTitle;
+
+    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!descTag) {
+      descTag = document.createElement("meta");
+      descTag.name = "description";
+      document.head.appendChild(descTag);
+    }
+    descTag.content = metaDesc;
+
+    // Clean up on unmount
+    return () => {
+      document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance";
+      if (descTag) descTag.content = "";
+    };
+  }, [article]);
+
+  // --- JSON-LD FAQPage schema ---
+  const faqItems = article ? extractFaqItems(article.content) : [];
+  const faqJsonLd = faqItems.length > 0
+    ? JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a,
+          },
+        })),
+      })
+    : null;
 
   if (!article) {
     return (
@@ -109,6 +175,13 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* JSON-LD FAQPage schema.org */}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: faqJsonLd }}
+        />
+      )}
       <Navbar />
 
       {/* Hero image */}
