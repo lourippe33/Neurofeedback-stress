@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import LocalSEO from "@/components/LocalSEO";
-import { Phone, Mail } from "lucide-react";
+
 
 export default function Footer() {
   return (
@@ -14,14 +14,6 @@ export default function Footer() {
             </div>
             <div className="font-body text-xs text-primary-foreground/40 tracking-widest uppercase mb-4">
               Centre NeurOptimal® · Tresses, Gironde
-            </div>
-            <div className="space-y-2">
-              <a href="tel:+33782386621" className="flex items-center gap-2 font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Phone size={14} /> 07 82 38 66 21
-              </a>
-              <a href="mailto:eric.gata@gmail.com" className="flex items-center gap-2 font-body text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Mail size={14} /> eric.gata@gmail.com
-              </a>
             </div>
           </div>
 
