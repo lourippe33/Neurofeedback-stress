@@ -14,7 +14,8 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function BlogPage() {
-  const [featured, ...rest] = articles;
+  const featured = articles[articles.length - 1];
+  const rest = articles.slice(0, articles.length - 1).reverse();
 
   return (
     <div className="min-h-screen flex flex-col">
