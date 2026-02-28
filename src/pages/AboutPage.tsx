@@ -194,11 +194,11 @@ export default function AboutPage() {
               {/* Eric GATA */}
               {/* Eric GATA */}
               <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={ericPhoto}
                     alt="Eric GATA, praticien certifié NeurOptimal® en neurofeedback dynamique à Tresses près de Bordeaux, Gironde"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-8">
@@ -220,11 +220,11 @@ export default function AboutPage() {
 
               {/* Sylvia RUI */}
               <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={sylviaPhoto}
                     alt="Sylvia RUI, praticienne en neurofeedback dynamique NeurOptimal® et orthophoniste, cabinet de Tresses près de Bordeaux, Gironde"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-8">
