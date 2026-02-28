@@ -98,7 +98,7 @@ export default function Pricing() {
             data-thrivecart-account="ericgata"
             data-thrivecart-tpl="v2"
             data-thrivecart-product="3"
-            className="thrivecart-button thrivecart-button-styled thrivecart-button_style-rounded thrivecart-button-custom inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-8 py-4 rounded-full bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300 shadow-lg cursor-pointer"
+            className="thrivecart-button thrivecart-button-styled thrivecart-button_style-rounded thrivecart-button-custom inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-8 py-4 rounded-full bg-foreground text-background hover:opacity-80 transition-opacity duration-300 shadow-lg cursor-pointer"
           >
             Régler ma séance en ligne — Eric GATA
           </a>
