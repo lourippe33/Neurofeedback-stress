@@ -10,7 +10,7 @@ const practitioners = [
     phone: "07 82 38 66 21",
     tel: "tel:+33782386621",
     email: "eric.gata@gmail.com",
-    mailto: "mailto:eric.gata@gmail.com",
+    mailto: "https://mail.google.com/mail/?view=cm&to=eric.gata@gmail.com",
     schedule: [
       { day: "Lundi", hours: "9h30–12h30 · 15h00–17h30" },
       { day: "Mardi", hours: "9h30–12h30 · 15h00–17h30" },
@@ -25,7 +25,7 @@ const practitioners = [
     phone: "07 83 35 88 69",
     tel: "tel:+33783358869",
     email: "sylvia.rui33@gmail.com",
-    mailto: "mailto:sylvia.rui33@gmail.com",
+    mailto: "https://mail.google.com/mail/?view=cm&to=sylvia.rui33@gmail.com",
     schedule: [
       { day: "Mercredi", hours: "13h00–18h00" },
       { day: "Jeudi", hours: "13h00–18h00" },
@@ -103,6 +103,8 @@ export default function ContactPage() {
                   </a>
                   <a
                     href={p.mailto}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-border text-foreground hover:bg-secondary transition-colors duration-300"
                   >
                     <Mail size={14} /> Email
@@ -196,7 +198,7 @@ export default function ContactPage() {
                         <a href={p.tel} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Appeler ${p.name}`}>
                           <Phone size={14} className="text-primary group-hover:text-primary-foreground" />
                         </a>
-                        <a href={p.mailto} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
+                        <a href={p.mailto} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
                           <Mail size={14} className="text-primary" />
                         </a>
                       </div>
