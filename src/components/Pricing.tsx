@@ -17,9 +17,7 @@ export default function Pricing() {
           <span className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 inline-block">
             Transparence tarifaire
           </span>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
-            Tarifs
-          </h2>
+          <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">Tarifs</h2>
           <div className="w-16 h-px bg-accent mx-auto mt-8" />
         </div>
 
@@ -27,7 +25,9 @@ export default function Pricing() {
           {/* Séance unité */}
           <div className="bg-card rounded-3xl p-10 border border-border shadow-card">
             <div className="mb-6">
-              <div className="font-display text-5xl font-light text-foreground mb-1">40 <span className="text-3xl">€</span></div>
+              <div className="font-display text-5xl font-light text-foreground mb-1">
+                40 <span className="text-3xl">€</span>
+              </div>
               <div className="font-body text-sm text-muted-foreground">par séance</div>
             </div>
             <h3 className="font-display text-2xl font-semibold text-foreground mb-4">Séance à l'unité</h3>
@@ -35,14 +35,16 @@ export default function Pricing() {
               Idéale pour découvrir le neurofeedback ou pour un suivi flexible selon vos disponibilités.
             </p>
             <div className="space-y-3">
-              {["Accueil & installation", "Séance de neurofeedback (33 min)", "Point rapide en fin de séance"].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary flex items-center justify-center">
-                    <Check size={11} className="text-primary" />
+              {["Accueil & installation", "Séance de neurofeedback (33 min)", "Point rapide en fin de séance"].map(
+                (item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-secondary flex items-center justify-center">
+                      <Check size={11} className="text-primary" />
+                    </div>
+                    <span className="font-body text-sm text-foreground">{item}</span>
                   </div>
-                  <span className="font-body text-sm text-foreground">{item}</span>
-                </div>
-              ))}
+                ),
+              )}
             </div>
           </div>
 
@@ -52,7 +54,9 @@ export default function Pricing() {
               <span className="font-body text-xs text-primary-foreground">Économie 20%</span>
             </div>
             <div className="mb-6">
-              <div className="font-display text-5xl font-light text-primary-foreground mb-1">320 <span className="text-3xl">€</span></div>
+              <div className="font-display text-5xl font-light text-primary-foreground mb-1">
+                320 <span className="text-3xl">€</span>
+              </div>
               <div className="font-body text-sm text-primary-foreground/60">soit 32 €/séance</div>
             </div>
             <h3 className="font-display text-2xl font-semibold text-primary-foreground mb-4">Forfait 10 séances</h3>
@@ -60,7 +64,12 @@ export default function Pricing() {
               Recommandé pour un accompagnement complet et des résultats durables.
             </p>
             <div className="space-y-3">
-              {["Accueil & installation", "Séance de neurofeedback (33 min)", "Point rapide en fin de séance", "Paiement en plusieurs fois possible"].map((item) => (
+              {[
+                "Accueil & installation",
+                "Séance de neurofeedback (33 min)",
+                "Point rapide en fin de séance",
+                "Paiement en plusieurs fois possible",
+              ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                     <Check size={11} className="text-primary-foreground" />
@@ -80,20 +89,24 @@ export default function Pricing() {
             </div>
             <div>
               <div className="font-body text-sm font-medium text-foreground mb-1">Cabinet à Tresses</div>
-              <div className="font-body text-xs text-muted-foreground">9 galerie marchande, 33370 Tresses · Proche Bordeaux (15 min)</div>
+              <div className="font-body text-xs text-muted-foreground">
+                9 galerie marchande, 33370 Tresses · Proche Bordeaux (15 min)
+              </div>
             </div>
           </div>
           <div className="bg-muted rounded-2xl p-6 border border-border">
             <div className="font-body text-sm font-medium text-foreground mb-2">Paiement en plusieurs fois</div>
             <div className="font-body text-xs text-muted-foreground">
-              Un échelonnement est possible sur demande pour le forfait 10 séances. Contactez-nous pour en discuter.
+              Un échelonnement est possible en 2 fois, 3 fois ou 4 fois.
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <p className="font-body text-sm text-muted-foreground mb-6">Prêt(e) à commencer ? Réglez votre séance en ligne :</p>
+          <p className="font-body text-sm text-muted-foreground mb-6">
+            Prêt(e) à commencer ? Réglez votre séance en ligne :
+          </p>
           <a
             data-thrivecart-account="ericgata"
             data-thrivecart-tpl="v2"
