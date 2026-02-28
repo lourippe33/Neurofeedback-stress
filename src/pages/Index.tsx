@@ -8,7 +8,7 @@ import { articles } from "@/data/articles";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
-  const latestArticles = articles.slice(0, 3);
+  const latestArticles = [...articles].reverse().slice(0, 3);
 
   return (
     <div className="min-h-screen">
