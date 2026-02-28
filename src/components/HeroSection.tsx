@@ -40,12 +40,6 @@ export default function Hero() {
           Le neurofeedback entraîne votre cerveau à s'autoréguler. Réduisez le stress, retrouvez un sommeil réparateur et améliorez votre concentration — naturellement. Cabinet à Tresses, proche Bordeaux.
         </p>
 
-        <div
-          className="flex justify-center animate-fade-up opacity-0"
-          style={{ animationDelay: "0.8s" }}
-        >
-          <CTAButtons variant="light" size="lg" />
-        </div>
       </div>
 
       <a
