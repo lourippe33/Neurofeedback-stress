@@ -7,14 +7,102 @@ import sylviaPhoto from "@/assets/sylvia-rui.jpg";
 
 export default function AboutPage() {
   useEffect(() => {
-    document.title = "À propos — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
-    let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!descTag) { descTag = document.createElement("meta"); descTag.name = "description"; document.head.appendChild(descTag); }
-    descTag.content = "Découvrez le cabinet Neurofeedback-Stress à Tresses (Gironde), proche Bordeaux. Accompagnement par la méthode NeurOptimal® pour retrouver équilibre, sérénité et bien-être naturellement.";
+    const PAGE_URL = "https://www.neurofeedback-stress.fr/a-propos";
+    const TITLE = "À propos — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
+    const DESC = "Rencontrez Eric GATA et Sylvia RUI, praticiens certifiés NeurOptimal® à Tresses (Gironde), près de Bordeaux. Neurofeedback dynamique pour le stress, l'anxiété, le sommeil et la concentration.";
+
+    document.title = TITLE;
+
+    const setMeta = (sel: string, attr: string, val: string) => {
+      let el = document.querySelector<HTMLMetaElement>(sel);
+      if (!el) { el = document.createElement("meta"); el.setAttribute(attr.split("=")[0], attr.split("=")[1] ?? attr); document.head.appendChild(el); }
+      el.content = val;
+    };
+
+    // Standard
+    setMeta('meta[name="description"]', 'name=description', DESC);
+    setMeta('meta[name="keywords"]', 'name=keywords', "neurofeedback Tresses, neurofeedback Bordeaux, NeurOptimal Gironde, Eric GATA praticien, Sylvia RUI orthophoniste neurofeedback, cabinet bien-être Tresses 33370");
+
+    // Open Graph
+    setMeta('meta[property="og:title"]', 'property=og:title', TITLE);
+    setMeta('meta[property="og:description"]', 'property=og:description', DESC);
+    setMeta('meta[property="og:url"]', 'property=og:url', PAGE_URL);
+    setMeta('meta[property="og:type"]', 'property=og:type', "website");
+    setMeta('meta[property="og:locale"]', 'property=og:locale', "fr_FR");
+    setMeta('meta[property="og:site_name"]', 'property=og:site_name', "Neurofeedback-Stress — Cabinet NeurOptimal® Tresses");
+
+    // Twitter Card
+    setMeta('meta[name="twitter:card"]', 'name=twitter:card', "summary");
+    setMeta('meta[name="twitter:title"]', 'name=twitter:title', TITLE);
+    setMeta('meta[name="twitter:description"]', 'name=twitter:description', DESC);
+
+    // Canonical
     let canonicalTag = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonicalTag) { canonicalTag = document.createElement("link"); canonicalTag.rel = "canonical"; document.head.appendChild(canonicalTag); }
-    canonicalTag.href = "https://www.neurofeedback-stress.fr/a-propos";
-    return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
+    canonicalTag.href = PAGE_URL;
+
+    // JSON-LD — Person schema for both practitioners
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.neurofeedback-stress.fr/#eric-gata",
+          "name": "Eric GATA",
+          "jobTitle": "Praticien en neurofeedback dynamique NeurOptimal®",
+          "description": "Praticien certifié NeurOptimal® depuis 2015, ancien collaborateur en laboratoire pharmaceutique reconverti dans l'accompagnement bien-être. Accompagne le stress, l'anxiété, les troubles du sommeil et la charge mentale.",
+          "telephone": "+33782386621",
+          "email": "eric.gata@gmail.com",
+          "worksFor": {
+            "@type": "LocalBusiness",
+            "name": "Neurofeedback-Stress",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "9 galerie marchande",
+              "addressLocality": "Tresses",
+              "postalCode": "33370",
+              "addressCountry": "FR"
+            }
+          },
+          "url": "https://www.neurofeedback-stress.fr/a-propos"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.neurofeedback-stress.fr/#sylvia-rui",
+          "name": "Sylvia RUI",
+          "jobTitle": "Praticienne en neurofeedback dynamique NeurOptimal® et orthophoniste",
+          "description": "Orthophoniste et praticienne certifiée NeurOptimal® depuis 2020. Accompagne la concentration, les fonctions cognitives, la gestion de l'anxiété et le bien-être au quotidien.",
+          "telephone": "+33783358869",
+          "email": "sylvia.rui33@gmail.com",
+          "worksFor": {
+            "@type": "LocalBusiness",
+            "name": "Neurofeedback-Stress",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "9 galerie marchande",
+              "addressLocality": "Tresses",
+              "postalCode": "33370",
+              "addressCountry": "FR"
+            }
+          },
+          "url": "https://www.neurofeedback-stress.fr/a-propos"
+        }
+      ]
+    };
+
+    let scriptTag = document.querySelector<HTMLScriptElement>('script[data-page="about"]');
+    if (!scriptTag) {
+      scriptTag = document.createElement("script");
+      scriptTag.type = "application/ld+json";
+      scriptTag.setAttribute("data-page", "about");
+      document.head.appendChild(scriptTag);
+    }
+    scriptTag.textContent = JSON.stringify(jsonLd);
+
+    return () => {
+      document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance";
+      document.querySelector('script[data-page="about"]')?.remove();
+    };
   }, []);
 
   return (
