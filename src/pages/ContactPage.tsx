@@ -10,7 +10,7 @@ const practitioners = [
     phone: "07 82 38 66 21",
     tel: "tel:+33782386621",
     email: "eric.gata@gmail.com",
-    mailto: "https://mail.google.com/mail/?view=cm&to=eric.gata@gmail.com",
+    mailto: "mailto:eric.gata@gmail.com",
     schedule: [
       { day: "Lundi", hours: "9h30–12h30 · 15h00–17h30" },
       { day: "Mardi", hours: "9h30–12h30 · 15h00–17h30" },
@@ -25,7 +25,7 @@ const practitioners = [
     phone: "07 83 35 88 69",
     tel: "tel:+33783358869",
     email: "sylvia.rui33@gmail.com",
-    mailto: "https://mail.google.com/mail/?view=cm&to=sylvia.rui33@gmail.com",
+    mailto: "mailto:sylvia.rui33@gmail.com",
     schedule: [
       { day: "Mercredi", hours: "13h00–18h00" },
       { day: "Jeudi", hours: "13h00–18h00" },
