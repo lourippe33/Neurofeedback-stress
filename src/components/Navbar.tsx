@@ -45,7 +45,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <Link to="/" className="flex items-center gap-3 leading-none">
-          <img src={logo} alt="Logo Neurofeedback Stress" className="h-10 w-10 object-contain" />
+          <img src={logo} alt="Logo Neurofeedback Stress" className="h-14 w-14 object-contain drop-shadow-md" />
           <div className="flex flex-col">
             <span className={`font-display text-xl font-semibold tracking-wide transition-colors duration-500 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
               Neurofeedback
