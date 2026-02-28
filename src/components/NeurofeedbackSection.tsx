@@ -71,6 +71,34 @@ export default function NeurofeedbackSection() {
         </div>
       </div>
 
+      {/* ── Vidéo explicative ── */}
+      <div className="py-16 bg-gradient-section border-t border-border">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 inline-block">
+              En vidéo
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
+              Le neurofeedback
+              <br />
+              <em>expliqué simplement</em>
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-card border border-border">
+            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1142362792?h=36874df46f&badge=0&autopause=0&player_id=0&app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="Explication neurofeedback"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ── Bienfaits ── */}
       <div className="py-28 bg-background">
         <div className="container mx-auto px-6">
