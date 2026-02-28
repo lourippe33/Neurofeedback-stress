@@ -44,7 +44,7 @@ export default function About() {
             <div className="aspect-[4/5] rounded-3xl bg-gradient-hero overflow-hidden flex items-end p-10">
               <div className="text-primary-foreground">
                 <p className="font-display text-3xl italic font-light leading-snug mb-4">
-                  "Votre cerveau sait comment guérir — nous lui rappelons simplement comment faire."
+                  "Votre cerveau sait comment retrouver son équilibre — nous lui rappelons simplement comment faire."
                 </p>
                 <div className="w-10 h-px bg-primary-foreground/40" />
               </div>
