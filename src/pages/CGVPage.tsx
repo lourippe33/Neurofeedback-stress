@@ -28,7 +28,7 @@ export default function CGVPage() {
 
           <CGVSection title="Article 2 – Avertissement légal">
             <p className="p-4 bg-muted rounded-xl border-l-4 border-primary">
-              Le Neurofeedback dynamique <strong className="text-foreground">n'est pas un traitement médical</strong>. Eric GATA n'est ni médecin, ni psychiatre. Les séances visent exclusivement le bien-être et l'optimisation des capacités personnelles. Elles ne remplacent en aucun cas un diagnostic ou un traitement médical.
+              Le Neurofeedback dynamique <strong className="text-foreground">n'est pas une pratique médicale</strong>. Eric GATA n'est ni médecin, ni psychiatre. Les séances visent exclusivement le bien-être et l'optimisation des capacités personnelles. Elles ne remplacent en aucun cas un suivi médical ou psychologique.
             </p>
           </CGVSection>
 

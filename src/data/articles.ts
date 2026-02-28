@@ -17,7 +17,7 @@ export const articles: Article[] = [
     title: "Neurofeedback et sommeil : comment retrouver des nuits vraiment réparatrices",
     metaTitle: "Neurofeedback et sommeil : retrouver des nuits réparatrices naturellement | neurofeedback-stress.fr",
     metaDescription: "Vous dormez mais vous vous réveillez épuisé ? Découvrez comment le neurofeedback NeurOptimal® peut vous aider à retrouver un sommeil plus profond et réparateur, naturellement.",
-    excerpt: "Fatigue persistante, concentration difficile, émotions instables ? Ces symptômes sont souvent le signe d'un sommeil perturbé. Découvrez comment le neurofeedback peut vous aider à retrouver des nuits réparatrices.",
+    excerpt: "Fatigue persistante, concentration difficile, émotions plus difficiles à gérer ? Ces signaux sont souvent le reflet d'un sommeil de mauvaise qualité. Découvrez comment le neurofeedback peut vous aider à retrouver des nuits réparatrices.",
     category: "Sommeil",
     date: "Mars 2026",
     imageUrl: "/images/neurofeedback-dynamique-sommeil-reveil.jpg",
@@ -78,7 +78,7 @@ Oui. Il s'agit d'une approche passive et non invasive. Aucune impulsion n'est en
 ? Peut-on combiner le neurofeedback avec d'autres approches pour mieux dormir ?
 Tout à fait. Le neurofeedback se combine très bien avec une bonne hygiène du sommeil (horaires réguliers, limitation des écrans le soir), la cohérence cardiaque ou d'autres pratiques de gestion du stress.
 
-? Le neurofeedback agit-il en profondeur ou uniquement sur les symptômes ?
+? Le neurofeedback agit-il en profondeur ou uniquement sur les difficultés visibles ?
 Il agit en profondeur. Contrairement aux solutions qui masquent les difficultés, le neurofeedback accompagne le cerveau à retrouver sa capacité naturelle à s'autoréguler — ce qui produit des effets qui se maintiennent dans le temps.
     `,
   },
@@ -190,7 +190,7 @@ Absolument. Le neurofeedback se combine très bien avec la cohérence cardiaque,
     content: `
 La gestion du stress est devenue une préoccupation majeure pour beaucoup d'entre nous. Au travail, à la maison, dans la vie sociale — la pression s'accumule, les pensées s'emballent, et les nuits ne suffisent plus à récupérer vraiment.
 
-Ce que l'on sait moins, c'est que stress, angoisses et nuits difficiles forment souvent un cercle vicieux. Et que briser ce cercle demande une approche qui agit en profondeur — pas seulement sur les symptômes visibles.
+Ce que l'on sait moins, c'est que stress, angoisses et nuits difficiles forment souvent un cercle vicieux. Et que briser ce cercle demande une approche qui agit en profondeur — pas seulement sur les manifestations visibles.
 
 ## Stress, angoisses, nuits difficiles : pourquoi ces trois réalités vont souvent ensemble
 
@@ -326,7 +326,7 @@ Tout à fait. Le neurofeedback NeurOptimal® est une approche entièrement passi
 Les premiers effets sont généralement ressentis entre la 5e et la 10e séance. Un parcours de 20 à 30 séances permet d'ancrer des changements durables. Le rythme est toujours adapté à la personne et à ce qu'elle traverse.
 
 ? Le neurofeedback remplace-t-il un suivi médical ou psychologique ?
-Non. Le neurofeedback est un accompagnement complémentaire, pas un substitut aux soins médicaux ou à un suivi psychologique. Il peut en revanche renforcer les effets d'un accompagnement déjà en place.
+Non. Le neurofeedback est un accompagnement complémentaire, pas un substitut à un suivi médical ou psychologique. Il peut en revanche renforcer les effets d'un accompagnement déjà en place.
 
 ? Peut-on venir en séance même quand on se sent très épuisé ?
 Oui. C'est même souvent dans ces moments-là que les personnes ressentent le plus rapidement un effet apaisant. La séance ne demande aucun effort — vous vous installez, écoutez de la musique, et laissez le cerveau faire son travail.
