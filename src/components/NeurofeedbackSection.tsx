@@ -5,7 +5,7 @@ const benefits = [
   { icon: Moon, title: "Sommeil réparateur", description: "Retrouvez un endormissement naturel et des nuits plus profondes, sans médicaments." },
   { icon: Zap, title: "Concentration & clarté", description: "Améliorez votre focus, votre clarté mentale et vos performances cognitives." },
   { icon: Heart, title: "Équilibre émotionnel", description: "Renforcez votre résilience face aux situations difficiles et retrouvez de la sérénité." },
-  { icon: Shield, title: "Trauma & PTSD", description: "Une approche douce pour accompagner la guérison des blessures émotionnelles profondes." },
+  { icon: Shield, title: "Chocs émotionnels", description: "Une approche douce pour soutenir le retour à l'équilibre intérieur après des blessures émotionnelles profondes." },
   { icon: Smile, title: "Bien-être & lâcher-prise", description: "Sentiment de légèreté, d'énergie retrouvée et de connexion avec soi-même." },
 ];
 
@@ -46,7 +46,7 @@ export default function NeurofeedbackSection() {
                 C'est un processus <strong className="text-foreground font-medium">100% naturel, non-invasif et sans effort</strong>, qui permet à votre cerveau de retrouver sa flexibilité et sa résilience naturelle.
               </p>
               <p className="font-body text-xs text-muted-foreground/60 mt-6 italic border-l-2 border-border pl-4">
-                Note : NeurOptimal® est un outil d'entraînement au bien-être et ne remplace en aucun cas un traitement médical.
+                Note : NeurOptimal® est un outil d'entraînement au bien-être et ne remplace en aucun cas un suivi médical ou psychologique.
               </p>
             </div>
 
