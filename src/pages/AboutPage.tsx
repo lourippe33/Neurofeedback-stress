@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Award, Heart, Users } from "lucide-react";
+import ericPhoto from "@/assets/eric-gata.jpg";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -87,6 +88,64 @@ export default function AboutPage() {
                 <div className="font-body text-xs text-muted-foreground">{stat.label}</div>
               </div>
             ))}
+          </div>
+
+          {/* Practitioners */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <span className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 inline-block">
+                L'équipe
+              </span>
+              <h2 className="font-display text-4xl font-light text-foreground">
+                Nos praticiens
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-10">
+              {/* Eric GATA */}
+              <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={ericPhoto}
+                    alt="Eric GATA — Praticien en neurofeedback"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="mb-4">
+                    <h3 className="font-display text-2xl font-light text-foreground">Eric GATA</h3>
+                    <p className="font-body text-xs tracking-widest uppercase text-accent mt-1">Praticien en neurofeedback depuis 2015</p>
+                  </div>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">
+                    Fort de plusieurs années d'expérience dans l'accompagnement bien-être, j'ai eu à cœur d'élargir mes domaines de compétences pour proposer un accompagnement encore plus complet. Je suis devenu praticien en neurofeedback en 2015.
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">
+                    Après une carrière en laboratoire pharmaceutique et des soucis de santé qui m'ont amené à revoir mes priorités, j'ai choisi de me reconvertir : non pas par hasard, mais par envie profonde d'aider les autres à traverser leurs difficultés et à retrouver un équilibre plus serein.
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    Aujourd'hui, j'accompagne des personnes qui se sentent submergées par le stress, la charge mentale, l'anxiété ou les troubles du sommeil. Mon objectif est simple : vous aider à reprendre la main, avec un cadre clair, un suivi régulier, et des avancées concrètes.
+                  </p>
+                </div>
+              </div>
+
+              {/* Sylvia RUI — placeholder */}
+              <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
+                <div className="aspect-[4/3] bg-gradient-section flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center">
+                    <Users size={32} className="text-primary" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="mb-4">
+                    <h3 className="font-display text-2xl font-light text-foreground">Sylvia RUI</h3>
+                    <p className="font-body text-xs tracking-widest uppercase text-accent mt-1">Praticienne en neurofeedback</p>
+                  </div>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed italic">
+                    Présentation à venir…
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Quote */}
