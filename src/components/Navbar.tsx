@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Accueil", href: "/", isRoute: true },
@@ -43,13 +44,16 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className={`font-display text-xl font-semibold tracking-wide transition-colors duration-500 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
-            Neurofeedback
-          </span>
-          <span className={`font-body text-xs tracking-[0.2em] uppercase transition-colors duration-500 ${textColorMuted}`}>
-            Tresses · NeurOptimal®
-          </span>
+        <Link to="/" className="flex items-center gap-3 leading-none">
+          <img src={logo} alt="Logo Neurofeedback Stress" className="h-10 w-10 object-contain" />
+          <div className="flex flex-col">
+            <span className={`font-display text-xl font-semibold tracking-wide transition-colors duration-500 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
+              Neurofeedback
+            </span>
+            <span className={`font-body text-xs tracking-[0.2em] uppercase transition-colors duration-500 ${textColorMuted}`}>
+              Tresses · NeurOptimal®
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
