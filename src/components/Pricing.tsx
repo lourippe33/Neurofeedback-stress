@@ -1,7 +1,15 @@
-import { Check, MapPin, Phone, Mail } from "lucide-react";
-import CTAButtons from "@/components/CTAButtons";
+import { Check, MapPin } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Pricing() {
+  useEffect(() => {
+    if (!document.querySelector('script[src="//tinder.thrivecart.com/embed/v1/thrivecart.js"]')) {
+      const script = document.createElement("script");
+      script.src = "//tinder.thrivecart.com/embed/v1/thrivecart.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
   return (
     <section id="tarifs" className="py-28 bg-background">
       <div className="container mx-auto px-6">
@@ -85,8 +93,16 @@ export default function Pricing() {
 
         {/* CTA */}
         <div className="text-center">
-          <p className="font-body text-sm text-muted-foreground mb-6">Prêt(e) à commencer ? Réservez dès maintenant :</p>
-          <CTAButtons variant="dark" size="md" />
+          <p className="font-body text-sm text-muted-foreground mb-6">Prêt(e) à commencer ? Réglez votre séance en ligne :</p>
+          <a
+            data-thrivecart-account="ericgata"
+            data-thrivecart-tpl="v2"
+            data-thrivecart-product="3"
+            className="thrivecart-button thrivecart-button-styled thrivecart-button_style-rounded thrivecart-button-custom inline-block font-body text-sm tracking-wide px-8 py-4 rounded-full text-white cursor-pointer"
+            style={{ backgroundColor: "#3B82F6" }}
+          >
+            Neuro paiement en ligne avec Eric
+          </a>
         </div>
       </div>
     </section>
