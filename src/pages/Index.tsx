@@ -63,18 +63,25 @@ const Index = () => {
           <p className="font-body text-base text-primary-foreground/70 max-w-xl mx-auto mb-10">
             Cabinet à Tresses, proche Bordeaux. Première consultation sans engagement. Réponse sous 24h.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+33782386621"
-              className="inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-10 py-4 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all duration-300 shadow-lg">
-              📞 Appeler — 07 82 38 66 21
-            </a>
-            <a href="mailto:eric.gata@gmail.com"
-              className="inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-10 py-4 rounded-full border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
-              ✉️ Envoyer un email
-            </a>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+            {[
+              { icon: "🎯", label: "Sans engagement", desc: "Aucune obligation après la première séance" },
+              { icon: "⏱️", label: "Séance de 45 min", desc: "Un bilan personnalisé dès le départ" },
+              { icon: "💬", label: "Réponse sous 24h", desc: "Nous revenons vers vous rapidement" },
+            ].map(({ icon, label, desc }) => (
+              <div key={label} className="bg-primary-foreground/10 backdrop-blur rounded-2xl p-5 border border-primary-foreground/20 text-center">
+                <div className="text-2xl mb-2">{icon}</div>
+                <div className="font-body text-sm font-semibold text-primary-foreground mb-1">{label}</div>
+                <div className="font-body text-xs text-primary-foreground/60 leading-relaxed">{desc}</div>
+              </div>
+            ))}
           </div>
+          <a href="/contact"
+            className="inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-10 py-4 rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all duration-300 shadow-lg">
+            Prendre contact →
+          </a>
           <p className="font-body text-xs text-primary-foreground/40 mt-4">
-            Première séance découverte · Réponse sous 24h
+            Première séance découverte · Cabinet à Tresses, proche Bordeaux
           </p>
         </div>
       </section>
