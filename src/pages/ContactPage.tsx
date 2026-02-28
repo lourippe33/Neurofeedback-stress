@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, Mail, MapPin, Clock, Check, Copy } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -34,6 +34,22 @@ const practitioners = [
 ];
 
 export default function ContactPage() {
+  const [copiedEmail, setCopiedEmail] = useState<string | null>(null);
+
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>, email: string) => {
+    // Try mailto first; if no mail client is configured, copy to clipboard
+    const mailtoWorked = window.navigator.userAgent; // always true, we use a different approach
+    // Check if we're on mobile or if the click should just try mailto
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(window.navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      navigator.clipboard.writeText(email).then(() => {
+        setCopiedEmail(email);
+        setTimeout(() => setCopiedEmail(null), 2500);
+      });
+    }
+  };
+
   useEffect(() => {
     document.title = "Contact — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
     let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
@@ -103,9 +119,10 @@ export default function ContactPage() {
                   </a>
                   <a
                     href={p.mailto}
+                    onClick={(e) => handleEmailClick(e, p.email)}
                     className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-border text-foreground hover:bg-secondary transition-colors duration-300"
                   >
-                    <Mail size={14} /> Email
+                    {copiedEmail === p.email ? <><Check size={14} className="text-primary" /> Copié !</> : <><Mail size={14} /> Email</>}
                   </a>
                 </div>
               </div>
@@ -196,8 +213,8 @@ export default function ContactPage() {
                         <a href={p.tel} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Appeler ${p.name}`}>
                           <Phone size={14} className="text-primary group-hover:text-primary-foreground" />
                         </a>
-                        <a href={p.mailto} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
-                          <Mail size={14} className="text-primary" />
+                        <a href={p.mailto} onClick={(e) => handleEmailClick(e, p.email)} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={copiedEmail === p.email ? "Copié !" : `Écrire à ${p.name}`}>
+                          {copiedEmail === p.email ? <Check size={14} className="text-primary" /> : <Mail size={14} className="text-primary" />}
                         </a>
                       </div>
                     </div>
