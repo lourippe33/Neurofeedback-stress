@@ -103,8 +103,6 @@ export default function ContactPage() {
                   </a>
                   <a
                     href={p.mailto}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-border text-foreground hover:bg-secondary transition-colors duration-300"
                   >
                     <Mail size={14} /> Email
@@ -198,7 +196,7 @@ export default function ContactPage() {
                         <a href={p.tel} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Appeler ${p.name}`}>
                           <Phone size={14} className="text-primary group-hover:text-primary-foreground" />
                         </a>
-                        <a href={p.mailto} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
+                        <a href={p.mailto} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
                           <Mail size={14} className="text-primary" />
                         </a>
                       </div>
