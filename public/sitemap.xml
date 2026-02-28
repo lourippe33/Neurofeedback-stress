@@ -4,31 +4,37 @@
   <!-- Pages statiques -->
   <url>
     <loc>https://www.neurofeedback-stress.fr/</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/a-propos</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/tarifs</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/zones</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/contact</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,37 +42,37 @@
   <!-- Articles de blog -->
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-sommeil-nuits-reparatrices</loc>
-    <lastmod>2025-03-01</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-stress-travail</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-stress-angoisses-nuits-difficiles</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-bien-etre-epreuves-de-vie</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-epuisement-retrouver-energie</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-concentration-ecrans-cerveau</loc>
-    <lastmod>2025-02-01</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -54,7 +54,7 @@ export default function ZonesPage() {
             Communes accompagnées
           </h2>
           <p className="font-body text-sm text-muted-foreground mb-8 leading-relaxed">
-            Le centre Neurofeedback-stress à Tresses accueille des patients de <strong className="text-foreground">Bordeaux</strong>, de la <strong className="text-foreground">Gironde</strong> et de toute la Bordeaux Métropole pour des séances de neurofeedback dynamique NeurOptimal®.
+            Le centre Neurofeedback-stress à Tresses accueille les personnes de <strong className="text-foreground">Bordeaux</strong>, de la <strong className="text-foreground">Gironde</strong> et de toute la Bordeaux Métropole pour des séances de neurofeedback dynamique NeurOptimal®.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-12">
