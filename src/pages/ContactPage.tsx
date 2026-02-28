@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-
-import { Link } from "react-router-dom";
-
 const practitioners = [
   {
     name: "Eric GATA",
+    initials: "EG",
     phone: "07 82 38 66 21",
     tel: "tel:+33782386621",
     email: "eric.gata@gmail.com",
@@ -23,6 +21,7 @@ const practitioners = [
   },
   {
     name: "Sylvia RUI",
+    initials: "SR",
     phone: "07 83 35 88 69",
     tel: "tel:+33783358869",
     email: "sylvia.rui33@gmail.com",
@@ -35,9 +34,6 @@ const practitioners = [
 ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", rgpd: false });
-  const [sent, setSent] = useState(false);
-
   useEffect(() => {
     document.title = "Contact — Cabinet Neurofeedback-Stress à Tresses, Bordeaux | NeurOptimal®";
     let descTag = document.querySelector<HTMLMetaElement>('meta[name="description"]');
@@ -48,12 +44,6 @@ export default function ContactPage() {
     canonicalTag.href = "https://www.neurofeedback-stress.fr/contact";
     return () => { document.title = "Neurofeedback Dynamique NeurOptimal® – Bien-être & Performance"; };
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.rgpd) return;
-    setSent(true);
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -68,25 +58,9 @@ export default function ContactPage() {
           <h1 className="font-display text-6xl md:text-7xl font-light text-primary-foreground mb-6">
             Contact
           </h1>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-xl mx-auto mb-8">
-            Une question, une envie de commencer ? Nous vous répondons rapidement.
+          <p className="font-body text-lg text-primary-foreground/70 max-w-xl mx-auto">
+            Une question, une envie de commencer ? Contactez directement l'un de nos praticiens.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="tel:+33782386621"
-              className="inline-flex items-center justify-center gap-2 rounded-full font-body text-sm tracking-wide px-8 py-4 bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-all shadow-lg"
-            >
-              <Phone size={16} />
-              Appeler Eric — 07 82 38 66 21
-            </a>
-            <a
-              href="tel:+33783358869"
-              className="inline-flex items-center justify-center gap-2 rounded-full font-body text-sm tracking-wide px-8 py-4 border border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 transition-all"
-            >
-              <Phone size={16} />
-              Appeler Sylvia — 07 83 35 88 69
-            </a>
-          </div>
         </div>
       </section>
 
@@ -101,7 +75,7 @@ export default function ContactPage() {
               <div key={p.name} className="bg-background rounded-2xl border border-border p-6">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-display text-primary font-semibold text-sm">
-                    {p.name.split(" ").map(n => n[0]).join("")}
+                    {p.initials}
                   </div>
                   <h3 className="font-display text-xl font-semibold text-foreground">{p.name}</h3>
                 </div>
@@ -114,18 +88,24 @@ export default function ContactPage() {
                       className={`flex justify-between px-4 py-2.5 font-body text-sm ${i % 2 === 0 ? "bg-secondary/50" : "bg-background"}`}
                     >
                       <span className="text-muted-foreground">{s.day}</span>
-                      <span className="text-foreground">{s.hours}</span>
+                      <span className="text-foreground font-medium">{s.hours}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Contact links */}
-                <div className="flex flex-col gap-2">
-                  <a href={p.tel} className="inline-flex items-center gap-2 font-body text-sm text-foreground hover:text-primary transition-colors">
-                    <Phone size={14} className="text-primary" /> {p.phone}
+                {/* Contact actions */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={p.tel}
+                    className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300"
+                  >
+                    <Phone size={14} /> {p.phone}
                   </a>
-                  <a href={p.mailto} className="inline-flex items-center gap-2 font-body text-sm text-foreground hover:text-primary transition-colors">
-                    <Mail size={14} className="text-primary" /> {p.email}
+                  <a
+                    href={p.mailto}
+                    className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-border text-foreground hover:bg-secondary transition-colors duration-300"
+                  >
+                    <Mail size={14} /> Email
                   </a>
                 </div>
               </div>
@@ -134,10 +114,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map + Info + Form */}
+      {/* Map + Info */}
       <section className="py-24 bg-background flex-1">
         <div className="container mx-auto px-6 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
 
             {/* Info + Map */}
             <div>
@@ -163,101 +143,67 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Google Maps embed */}
               <div className="rounded-2xl overflow-hidden border border-border mb-8 shadow-sm">
                 <iframe
                   title="Cabinet Neurofeedback-stress Tresses"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.3!2d-0.4687!3d44.8230!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527e0000000001%3A0x1!2s9+Galerie+Marchande%2C+33370+Tresses!5e0!3m2!1sfr!2sfr!4v1700000000000"
                   width="100%"
-                  height="260"
+                  height="280"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-
-              <div className="bg-gradient-section rounded-2xl p-6 border border-border">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                  Première séance découverte
-                </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  La première consultation est un entretien sans engagement pour comprendre vos besoins et vous présenter la méthode NeurOptimal®. Durée : environ 1h.
-                </p>
-              </div>
             </div>
 
-            {/* Form */}
-            <div>
-              <h2 className="font-display text-4xl font-light text-foreground mb-8">
-                Envoyer un message
-              </h2>
-              {sent ? (
-                <div className="bg-secondary rounded-2xl p-10 text-center">
-                  <div className="font-display text-3xl font-semibold text-primary mb-3">Merci !</div>
-                  <p className="font-body text-sm text-muted-foreground">
-                    Votre message a bien été envoyé. Nous vous répondrons dans les 24h.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Première séance + réassurance */}
+            <div className="space-y-6">
+              <h2 className="font-display text-4xl font-light text-foreground">Première séance</h2>
+              <div className="bg-gradient-section rounded-2xl p-7 border border-border">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                  Séance découverte sans engagement
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">
+                  La première consultation est un entretien pour comprendre vos besoins et vous présenter la méthode NeurOptimal®. Durée : environ 1h.
+                </p>
+                <div className="space-y-3">
                   {[
-                    { name: "name", label: "Prénom & Nom", type: "text", placeholder: "Marie Dupont" },
-                    { name: "email", label: "Email", type: "email", placeholder: "marie@exemple.fr" },
-                    { name: "phone", label: "Téléphone (optionnel)", type: "tel", placeholder: "06 12 34 56 78" },
-                  ].map((field) => (
-                    <div key={field.name}>
-                      <label className="font-body text-xs text-muted-foreground mb-2 block tracking-wide">
-                        {field.label}
-                      </label>
-                      <input
-                        type={field.type}
-                        placeholder={field.placeholder}
-                        value={formData[field.name as keyof typeof formData] as string}
-                        onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-muted border border-border font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
-                      />
+                    "Aucun engagement après la première séance",
+                    "Résultats souvent ressentis dès les premières séances",
+                    "Approche 100% naturelle, sans médicaments",
+                    "Réponse sous 24h à toute demande",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3 font-body text-sm text-muted-foreground">
+                      <div className="flex-shrink-0 w-4 h-4 mt-0.5 rounded-full bg-primary/15 flex items-center justify-center">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      </div>
+                      {item}
                     </div>
                   ))}
-                  <div>
-                    <label className="font-body text-xs text-muted-foreground mb-2 block tracking-wide">Votre message</label>
-                    <textarea
-                      rows={4}
-                      placeholder="Décrivez votre situation ou posez vos questions..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-muted border border-border font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all resize-none"
-                    />
-                  </div>
+                </div>
+              </div>
 
-                  {/* RGPD */}
-                  <div className="flex items-start gap-3 bg-muted rounded-xl p-4">
-                    <input
-                      type="checkbox"
-                      id="rgpd"
-                      required
-                      checked={formData.rgpd}
-                      onChange={(e) => setFormData({ ...formData, rgpd: e.target.checked })}
-                      className="mt-0.5 flex-shrink-0 w-4 h-4 accent-primary cursor-pointer"
-                    />
-                    <label htmlFor="rgpd" className="font-body text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                      J'accepte que mes informations soient utilisées pour me recontacter. Aucune publicité.{" "}
-                      <Link to="/politique-confidentialite" className="text-primary hover:underline">
-                        Voir la politique de confidentialité
-                      </Link>.{" "}
-                      <span className="text-destructive">*</span>
-                    </label>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-4 rounded-full bg-primary text-primary-foreground font-body text-sm tracking-wide hover:bg-accent transition-colors duration-300 disabled:opacity-50"
-                    disabled={!formData.rgpd}
-                  >
-                    Envoyer le message
-                  </button>
-                </form>
-              )}
+              <div className="bg-card rounded-2xl p-7 border border-border shadow-soft">
+                <p className="font-body text-sm text-muted-foreground mb-5 leading-relaxed">
+                  Choisissez votre praticien et contactez-le directement par téléphone ou email :
+                </p>
+                <div className="space-y-4">
+                  {practitioners.map((p) => (
+                    <div key={p.name} className="flex items-center justify-between py-3 border-b border-border last:border-0">
+                      <span className="font-body text-sm font-medium text-foreground">{p.name}</span>
+                      <div className="flex gap-2">
+                        <a href={p.tel} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Appeler ${p.name}`}>
+                          <Phone size={14} className="text-primary group-hover:text-primary-foreground" />
+                        </a>
+                        <a href={p.mailto} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
+                          <Mail size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -267,3 +213,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
