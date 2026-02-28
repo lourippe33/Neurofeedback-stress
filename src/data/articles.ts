@@ -19,7 +19,7 @@ export const articles: Article[] = [
     metaDescription: "Vous dormez mais vous vous réveillez épuisé ? Découvrez comment le neurofeedback NeurOptimal® peut vous aider à retrouver un sommeil plus profond et réparateur, naturellement.",
     excerpt: "Fatigue persistante, concentration difficile, émotions instables ? Ces symptômes sont souvent le signe d'un sommeil perturbé. Découvrez comment le neurofeedback peut vous aider à retrouver des nuits réparatrices.",
     category: "Sommeil",
-    date: "Mars 2025",
+    date: "Mars 2026",
     imageUrl: "/images/neurofeedback-dynamique-sommeil-reveil.jpg",
     imageAlt: "Réveil rose sur fond sombre illustrant les difficultés de sommeil accompagnées par le neurofeedback dynamique NeurOptimal®",
     content: `
@@ -89,9 +89,8 @@ Il agit en profondeur. Contrairement aux solutions qui masquent les difficultés
     metaDescription: "Débordé, épuisé, à bout ? Découvrez comment le neurofeedback dynamique NeurOptimal® accompagne les actifs à mieux gérer le stress au travail, naturellement et durablement.",
     excerpt: "Débordé, irritable, épuisé en fin de journée ? Le stress au travail s'est installé progressivement dans votre quotidien et vous ne savez plus comment en sortir. Le neurofeedback dynamique NeurOptimal® est une approche naturelle et non invasive qui accompagne votre cerveau à retrouver son équilibre — sans médicaments, sans effort conscient.",
     category: "Stress",
-    date: "Janvier 2025",
+    date: "Octobre 2025",
     imageUrl: "/images/neurofeedback-stress-travail-illustration.webp",
-    imageAlt: "Illustration humoristique d'un homme stressé à son bureau illustrant le stress au travail accompagné par le neurofeedback dynamique NeurOptimal®",
     content: `
 Entre les échéances, les responsabilités qui s'accumulent et les attentes toujours plus élevées, le stress au travail est devenu le mal du siècle. Une grande majorité des actifs français déclarent ressentir une pression régulière dans leur environnement professionnel.
 
@@ -185,7 +184,7 @@ Absolument. Le neurofeedback se combine très bien avec la cohérence cardiaque,
     metaDescription: "Stress constant, pensées envahissantes, nuits agitées ? Découvrez comment le neurofeedback dynamique NeurOptimal® accompagne votre cerveau à retrouver calme et équilibre naturellement.",
     excerpt: "Stress constant, pensées qui tournent en boucle, nuits agitées... Ces trois réalités se nourrissent mutuellement et peuvent rapidement épuiser. Le neurofeedback dynamique NeurOptimal® accompagne le cerveau à sortir de ce cercle naturellement, sans médicaments et sans effort conscient.",
     category: "Stress",
-    date: "Janvier 2025",
+    date: "Novembre 2025",
     imageUrl: "/images/neurofeedback-stress-angoisses-nuits-difficiles.jpg",
     imageAlt: "Homme les mains dans la tête au bord de l'eau illustrant le poids du stress et des angoisses au quotidien accompagnés par le neurofeedback dynamique NeurOptimal®",
     content: `
@@ -260,7 +259,7 @@ Oui. Il s'agit d'une approche entièrement passive et non invasive. Aucune impul
     metaDescription: "Choc émotionnel, période difficile, équilibre fragilisé ? Découvrez comment le neurofeedback dynamique NeurOptimal® accompagne le cerveau à retrouver calme et sérénité naturellement.",
     excerpt: "Certaines périodes de la vie nous ébranlent profondément. Un choc, une annonce difficile, un bouleversement inattendu — et le cerveau se retrouve en état d'alerte permanent, parfois pendant des semaines ou des mois. Le neurofeedback dynamique NeurOptimal® est une approche naturelle et non invasive qui accompagne le cerveau à retrouver son équilibre émotionnel, même dans les moments les plus difficiles.",
     category: "Bien-être",
-    date: "Janvier 2025",
+    date: "Décembre 2025",
     imageUrl: "/images/neurofeedback-bien-etre-epreuves-de-vie.jpg",
     imageAlt: "Personne sereine dans un espace lumineux illustrant le soutien au bien-être émotionnel face aux épreuves de vie grâce au neurofeedback dynamique NeurOptimal®",
     content: `
@@ -343,7 +342,7 @@ Oui. Le neurofeedback NeurOptimal® est une approche non invasive, sans effets s
     metaDescription: "Fatigue profonde, vide intérieur, motivation en berne ? Découvrez comment le neurofeedback dynamique NeurOptimal® accompagne le cerveau à retrouver énergie, clarté et équilibre naturellement.",
     excerpt: "Fatigue profonde, vide intérieur, motivation qui s'efface jour après jour... L'épuisement profond n'est pas une simple fatigue passagère. C'est un signal fort que le cerveau envoie pour dire qu'il a besoin d'aide. Le neurofeedback dynamique NeurOptimal® est une approche naturelle et non invasive qui accompagne le cerveau à retrouver son équilibre — en douceur, à votre rythme.",
     category: "Bien-être",
-    date: "Janvier 2025",
+    date: "Janvier 2026",
     imageUrl: "/images/neurofeedback-epuisement-retrouver-energie.jpg",
     imageAlt: "Personne sereine regardant vers l'horizon dans un espace lumineux illustrant le retour à l'énergie et à l'équilibre grâce au neurofeedback dynamique NeurOptimal®",
     content: `
@@ -444,7 +443,7 @@ Oui. Le neurofeedback NeurOptimal® est une approche entièrement passive et non
     metaDescription: "Impossible de rester concentré plus de quelques minutes ? Les écrans épuisent le cerveau. Découvrez comment le neurofeedback dynamique NeurOptimal® aide à retrouver focus et clarté mentale.",
     excerpt: "Vous commencez une tâche et dix minutes plus tard vous êtes sur votre téléphone sans savoir comment vous y êtes arrivé. Vous relisez la même phrase trois fois sans la retenir. Vous finissez la journée épuisé alors que vous avez l'impression de n'avoir rien accompli vraiment. Ce n'est pas un manque de volonté — c'est un cerveau saturé. Et le neurofeedback dynamique NeurOptimal® peut l'aider à retrouver son focus naturellement.",
     category: "Concentration",
-    date: "Février 2025",
+    date: "Février 2026",
     imageUrl: "/images/neurofeedback-concentration-ecrans-cerveau.jpg",
     imageAlt: "Personne fatiguée face à un écran illustrant les difficultés de concentration liées aux écrans accompagnées par le neurofeedback dynamique NeurOptimal®",
     content: `
