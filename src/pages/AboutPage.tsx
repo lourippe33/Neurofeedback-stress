@@ -198,7 +198,7 @@ export default function AboutPage() {
                   <img
                     src={ericPhoto}
                     alt="Eric GATA, praticien certifié NeurOptimal® en neurofeedback dynamique à Tresses près de Bordeaux, Gironde"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <div className="p-8">
@@ -224,7 +224,7 @@ export default function AboutPage() {
                   <img
                     src={sylviaPhoto}
                     alt="Sylvia RUI, praticienne en neurofeedback dynamique NeurOptimal® et orthophoniste, cabinet de Tresses près de Bordeaux, Gironde"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
                 <div className="p-8">
