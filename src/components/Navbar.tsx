@@ -69,45 +69,6 @@ export default function Navbar() {
             )
           )}
 
-          {/* CTA dropdown */}
-          <div className="relative" ref={ctaRef}>
-            <button
-              onClick={() => setCtaOpen(!ctaOpen)}
-              className={`flex items-center gap-1 font-body text-sm px-5 py-2 rounded-full border transition-all duration-300 ${
-                scrolled
-                  ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  : "border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10"
-              }`}
-            >
-              Réserver <ChevronDown size={14} className={`transition-transform ${ctaOpen ? "rotate-180" : ""}`} />
-            </button>
-            {ctaOpen && (
-              <div className="absolute right-0 top-full mt-2 w-56 bg-card rounded-2xl shadow-card border border-border overflow-hidden">
-                <a
-                  href="tel:+33782386621"
-                  className="flex items-center gap-3 px-5 py-4 font-body text-sm text-foreground hover:bg-secondary transition-colors border-b border-border"
-                  onClick={() => setCtaOpen(false)}
-                >
-                  <Phone size={15} className="text-primary" />
-                  <div>
-                    <div className="font-medium">Appeler</div>
-                    <div className="text-xs text-muted-foreground">07 82 38 66 21</div>
-                  </div>
-                </a>
-                <a
-                  href="mailto:eric.gata@gmail.com"
-                  className="flex items-center gap-3 px-5 py-4 font-body text-sm text-foreground hover:bg-secondary transition-colors"
-                  onClick={() => setCtaOpen(false)}
-                >
-                  <Mail size={15} className="text-primary" />
-                  <div>
-                    <div className="font-medium">Envoyer un email</div>
-                    <div className="text-xs text-muted-foreground">eric.gata@gmail.com</div>
-                  </div>
-                </a>
-              </div>
-            )}
-          </div>
         </nav>
 
         <button className={`md:hidden transition-colors ${textColor}`} onClick={() => setOpen(!open)}>
