@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Award, Heart, Users } from "lucide-react";
 import ericPhoto from "@/assets/eric-gata.jpg";
+import sylviaPhoto from "@/assets/sylvia-rui.jpg";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -103,11 +104,12 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-2 gap-10">
               {/* Eric GATA */}
+              {/* Eric GATA */}
               <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={ericPhoto}
-                    alt="Eric GATA — Praticien en neurofeedback"
+                    alt="Eric GATA, praticien certifié NeurOptimal® en neurofeedback dynamique à Tresses près de Bordeaux, Gironde"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -128,20 +130,25 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Sylvia RUI — placeholder */}
+              {/* Sylvia RUI */}
               <div className="bg-card rounded-3xl overflow-hidden shadow-card border border-border">
-                <div className="aspect-[4/3] bg-gradient-section flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center">
-                    <Users size={32} className="text-primary" />
-                  </div>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={sylviaPhoto}
+                    alt="Sylvia RUI, praticienne en neurofeedback dynamique NeurOptimal® et orthophoniste, cabinet de Tresses près de Bordeaux, Gironde"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div className="p-8">
                   <div className="mb-4">
                     <h3 className="font-display text-2xl font-light text-foreground">Sylvia RUI</h3>
-                    <p className="font-body text-xs tracking-widest uppercase text-accent mt-1">Praticienne en neurofeedback</p>
+                    <p className="font-body text-xs tracking-widest uppercase text-accent mt-1">Praticienne en neurofeedback depuis 2020 · Orthophoniste</p>
                   </div>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed italic">
-                    Présentation à venir…
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-3">
+                    Orthophoniste depuis plusieurs années, je me suis lancée dans l'aventure du neurofeedback en 2020. J'ai tout de suite été touchée par le potentiel de cette approche : une méthode d'entraînement du cerveau, douce et progressive, qui peut soutenir la concentration, les fonctions cognitives, la gestion de l'anxiété et, plus largement, le bien-être au quotidien.
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    Le neurofeedback m'a paru être un complément naturel à ma pratique d'orthophoniste : il s'intègre dans une vision globale de la personne, en respectant son rythme et ses objectifs. Mon intention est de proposer un accompagnement sérieux, humain et personnalisé, avec un cadre clair et un suivi régulier.
                   </p>
                 </div>
               </div>
