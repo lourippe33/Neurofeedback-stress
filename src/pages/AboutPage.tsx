@@ -172,8 +172,8 @@ export default function AboutPage() {
               { value: "100%", label: "non invasif" },
               { value: "NeurOptimal®", label: "technologie certifiée" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center py-8 px-6 bg-card rounded-2xl shadow-soft border border-border">
-                <div className="font-display text-3xl font-semibold text-primary mb-2">{stat.value}</div>
+              <div key={stat.label} className="text-center py-8 px-4 bg-card rounded-2xl shadow-soft border border-border">
+                <div className="font-display text-2xl font-semibold text-primary mb-2 break-words leading-tight">{stat.value}</div>
                 <div className="font-body text-xs text-muted-foreground">{stat.label}</div>
               </div>
             ))}
