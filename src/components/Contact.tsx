@@ -11,7 +11,7 @@ export default function Contact() {
           <h2 className="font-display text-5xl md:text-6xl font-light text-primary-foreground mb-6">
             Réservez votre
             <br />
-            <em>première séance</em>
+            première séance
           </h2>
           <p className="font-body text-base text-primary-foreground/70 max-w-xl mx-auto">
             Chaque parcours commence par un premier pas. Contactez-nous pour une consultation initiale — sans engagement.

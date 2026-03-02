@@ -58,7 +58,7 @@ const Index = () => {
           <h2 className="font-display text-5xl md:text-6xl font-light text-primary-foreground mb-6">
             Réservez votre
             <br />
-            <em>première séance</em>
+            première séance
           </h2>
           <p className="font-body text-base text-primary-foreground/70 max-w-xl mx-auto mb-10">
             Cabinet à Tresses, proche Bordeaux. Première consultation sans engagement. Réponse sous 24h.

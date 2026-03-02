@@ -30,7 +30,7 @@ export default function Hero() {
         >
           Retrouvez votre
           <br />
-          <em className="font-light italic">équilibre intérieur</em>
+          équilibre intérieur
         </h1>
 
         <p

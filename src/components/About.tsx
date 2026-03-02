@@ -11,7 +11,7 @@ export default function About() {
             <h2 className="font-display text-5xl font-light text-foreground mb-8 leading-tight">
               Une approche
               <br />
-              <em>non invasive</em>
+              non invasive
               <br />& naturelle
             </h2>
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">

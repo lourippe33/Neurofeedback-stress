@@ -245,7 +245,7 @@ export default function AboutPage() {
 
           {/* Quote */}
           <div className="bg-gradient-cta rounded-3xl p-12 text-center">
-            <p className="font-display text-3xl italic font-light text-primary-foreground leading-relaxed mb-6">
+            <p className="font-display text-3xl font-light text-primary-foreground leading-relaxed mb-6">
               "Votre cerveau sait comment retrouver son équilibre — nous lui rappelons simplement comment faire."
             </p>
             <div className="w-12 h-px bg-primary-foreground/30 mx-auto" />

@@ -29,7 +29,7 @@ export default function NeurofeedbackSection() {
             <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
               Qu'est-ce que le
               <br />
-              <em>Neurofeedback Dynamique ?</em>
+              Neurofeedback Dynamique ?
             </h2>
             <div className="w-16 h-px bg-accent mx-auto mt-8" />
           </div>
@@ -81,7 +81,7 @@ export default function NeurofeedbackSection() {
             <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
               Le neurofeedback
               <br />
-              <em>expliqué simplement</em>
+              expliqué simplement
             </h2>
           </div>
           <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-card border border-border">
@@ -106,7 +106,7 @@ export default function NeurofeedbackSection() {
             <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
               Les bienfaits du
               <br />
-              <em>Neurofeedback</em>
+              Neurofeedback
             </h2>
             <div className="w-16 h-px bg-accent mx-auto mt-8" />
           </div>
@@ -138,7 +138,7 @@ export default function NeurofeedbackSection() {
             <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
               Le déroulement
               <br />
-              <em>d'une séance</em>
+              d'une séance
             </h2>
             <div className="w-16 h-px bg-accent mx-auto mt-8" />
           </div>
