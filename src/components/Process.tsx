@@ -30,7 +30,7 @@ export default function Process() {
           <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">
             Comment ça
             <br />
-            <em>fonctionne ?</em>
+            fonctionne ?
           </h2>
           <div className="w-16 h-px bg-accent mx-auto mt-8" />
         </div>
