@@ -28,7 +28,7 @@ export default function About() {
                 { value: "Personnalisé", label: "pour chaque patient" },
               ].map((stat, i) => (
                 <div key={i} className="border-l-2 border-accent pl-4">
-                  <div className="font-display text-2xl font-semibold text-foreground">
+                  <div className="font-display text-xl sm:text-2xl font-semibold text-foreground leading-tight">
                     {stat.value}
                   </div>
                   <div className="font-body text-xs text-muted-foreground mt-1">
