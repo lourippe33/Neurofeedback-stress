@@ -168,7 +168,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
             {[
               { value: "+3 000", label: "séances réalisées" },
-              { value: "20+", label: "ans d'expérience" },
+              { value: "+15", label: "ans d'expérience" },
               { value: "100%", label: "non invasif" },
               { value: "NeurOptimal®", label: "technologie certifiée" },
             ].map((stat) => (
