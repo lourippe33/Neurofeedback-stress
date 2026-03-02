@@ -13,14 +13,6 @@ export default function Pricing() {
   return (
     <section id="tarifs" className="py-28 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <span className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 inline-block">
-            Transparence tarifaire
-          </span>
-          <h2 className="font-display text-5xl md:text-6xl font-light text-foreground">Tarifs</h2>
-          <div className="w-16 h-px bg-accent mx-auto mt-8" />
-        </div>
-
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
           {/* Séance unité */}
           <div className="bg-card rounded-3xl p-10 border border-border shadow-card">
