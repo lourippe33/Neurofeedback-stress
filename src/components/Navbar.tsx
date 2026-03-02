@@ -91,14 +91,6 @@ export default function Navbar() {
               </a>
             )
           )}
-          <div className="p-4 space-y-3">
-            <a href="tel:+33782386621" className="flex items-center justify-center gap-2 w-full font-body text-sm px-5 py-3 rounded-full bg-primary text-primary-foreground">
-              <Phone size={15} /> Appeler — 07 82 38 66 21
-            </a>
-            <a href="mailto:eric.gata@gmail.com" className="flex items-center justify-center gap-2 w-full font-body text-sm px-5 py-3 rounded-full border border-primary text-primary">
-              <Mail size={15} /> Envoyer un email
-            </a>
-          </div>
         </div>
       )}
     </header>
