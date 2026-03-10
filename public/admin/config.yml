@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: lourippe33/Neurofeedback-stress
-  branch: main
+  name: git-gateway
 
 media_folder: "public/images"
 public_folder: "/images"
