@@ -54,12 +54,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-2">
-          <div className="font-body text-xs text-primary-foreground/30">
-            © 2025 Neurofeedback-stress · SIREN 813 904 729
-          </div>
-          <div className="font-body text-xs text-primary-foreground/30">
-            9 galerie marchande, 33370 Tresses
+        <div className="border-t border-primary-foreground/10 pt-4 space-y-3">
+          <p className="font-body text-xs text-primary-foreground/25 italic text-center">
+            Le neurofeedback dynamique NeurOptimal® est une approche de bien-être et d'entraînement cérébral. Il ne constitue pas une pratique médicale et ne remplace pas l'avis d'un médecin ou d'un professionnel de santé.
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+            <div className="font-body text-xs text-primary-foreground/30">
+              © 2025 Neurofeedback-stress · SIREN 813 904 729
+            </div>
+            <div className="font-body text-xs text-primary-foreground/30">
+              9 galerie marchande, 33370 Tresses
+            </div>
           </div>
         </div>
       </div>

@@ -126,13 +126,13 @@ export default function CityPage() {
             </div>
 
             <div className="bg-gradient-section rounded-2xl p-8 border border-border">
-              <h2 className="font-display text-2xl font-light text-foreground mb-6">Ce que le neurofeedback traite</h2>
+              <h2 className="font-display text-2xl font-light text-foreground mb-6">Situations accompagnées</h2>
               <div className="space-y-3">
                 {[
                   "Stress chronique & anxiété",
                   "Troubles du sommeil",
                   "Manque de concentration",
-                  "Épuisement & burn-out",
+                  "Épuisement professionnel",
                   "Chocs émotionnels",
                   "Bien-être général",
                 ].map((item) => (

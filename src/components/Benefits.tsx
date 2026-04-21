@@ -23,8 +23,8 @@ const benefits = [
   },
   {
     icon: Shield,
-    title: "Trauma & PTSD",
-    description: "Une approche douce pour accompagner la guérison des blessures émotionnelles profondes.",
+    title: "Chocs & épreuves de vie",
+    description: "Une approche douce pour retrouver un équilibre intérieur après une période difficile.",
   },
   {
     icon: Smile,
