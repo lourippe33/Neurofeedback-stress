@@ -103,7 +103,7 @@ Les personnes qui suivent un parcours de neurofeedback pour des difficultés de 
 
 "Ce qui m'a le plus surpris, c'est que je n'ai rien changé d'autre. Pas de tisane, pas d'application. Le sommeil s'est juste... remis en place."
 
-Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements dans la durée.
+Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements dans la durée. Consultez nos [tarifs](/tarifs) pour plus d'informations.
 
 ## Et si on combinait plusieurs approches ?
 
@@ -243,7 +243,7 @@ Les premiers effets sont généralement ressentis après **5 à 10 séances**. U
 
 Il est tentant d'attendre "d'aller vraiment mal" avant de consulter. Mais le neurofeedback est particulièrement efficace en amont — quand le stress est présent mais pas encore épuisant. Plus tôt on accompagne le cerveau à retrouver son équilibre, plus les effets sont rapides et durables.
 
-Si vous sentez que vous approchez de vos limites, que la pression s'accumule et que vous ne savez plus comment souffler — c'est le bon moment pour agir.
+Si vous sentez que vous approchez de vos limites, que la pression s'accumule et que vous ne savez plus comment souffler — c'est le bon moment pour agir. [Prenez contact avec nous](/contact) pour une première séance sans engagement.
 
 ## FAQ — Vos questions sur le neurofeedback et le stress au travail
 
@@ -351,7 +351,7 @@ Les personnes qui suivent un parcours de neurofeedback pour le stress et les ang
 
 "Mon entourage a remarqué que j'étais plus détendu avant moi. Ma femme m'a dit que je réagissais différemment aux contrariétés — avec plus de recul. Je ne l'avais pas vraiment conscientisé mais c'était vrai."
 
-Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements durables dans le temps.
+Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements durables dans le temps. Voir aussi notre article sur [l'épuisement profond](/blog/neurofeedback-epuisement-retrouver-energie) qui va souvent de pair.
 
 ## Neurofeedback et suivi psychologique : des approches complémentaires
 
@@ -471,7 +471,7 @@ Les personnes qui ont suivi un parcours de neurofeedback pendant une période di
 
 "Ce que j'ai apprécié, c'est qu'on ne me demandait rien. Pas de parler, pas de raconter. Je venais, je m'installais, je repartais un peu plus léger. Ça avait l'air simple, et pourtant les effets étaient réels."
 
-Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements durables.
+Les premiers effets sont généralement ressentis après **5 à 10 séances**. Un parcours de 20 à 30 séances permet d'ancrer des changements durables. Notre [cabinet à Tresses](/zones) accueille les personnes de toute la Gironde.
 
 ## FAQ — Vos questions sur le neurofeedback et le soutien émotionnel
 
@@ -565,7 +565,7 @@ En accompagnant le cerveau à mieux s'autoréguler, le neurofeedback aide progre
 - **Retrouver le sens et le plaisir** dans les activités du quotidien, progressivement
 - **Renforcer la résilience** pour mieux faire face aux pressions futures
 
-Ce n'est pas une solution miracle qui efface l'épuisement du jour au lendemain. C'est un accompagnement progressif, qui respecte le rythme de chaque personne et produit des effets durables.
+Ce n'est pas une solution miracle qui efface l'épuisement du jour au lendemain. C'est un accompagnement progressif, qui respecte le rythme de chaque personne et produit des effets durables. Découvrez nos [tarifs et formules](/tarifs).
 
 ## Le neurofeedback comme soutien préventif
 
@@ -696,7 +696,7 @@ En accompagnant le cerveau à mieux s'autoréguler, le neurofeedback aide progre
 - **Retrouver le plaisir de la lecture** ou d'une activité qui demande de la profondeur
 - **Être plus présent** dans les conversations et les moments du quotidien
 
-Les effets ne se limitent pas au travail — une meilleure concentration impacte positivement toute la qualité de vie.
+Les effets ne se limitent pas au travail — une meilleure concentration impacte positivement toute la qualité de vie. Lire aussi : [stress et nuits difficiles](/blog/neurofeedback-stress-angoisses-nuits-difficiles), souvent liés à la surcharge mentale.
 
 ## Ce que vivent les personnes accompagnées
 

@@ -9,8 +9,10 @@ function escapeHtml(str: string) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function bold(text: string) {
-  return escapeHtml(text).replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>');
+function renderInline(text: string) {
+  return escapeHtml(text)
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">$1</a>');
 }
 
 function renderContent(content: string) {
@@ -55,7 +57,7 @@ function renderContent(content: string) {
                   <span className="flex-shrink-0 w-5 h-5 rounded-full border border-border flex items-center justify-center text-muted-foreground group-open:rotate-45 transition-transform duration-200 text-base leading-none">+</span>
                 </summary>
                 <div className="px-6 pb-5">
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: bold(item.a) }} />
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: renderInline(item.a) }} />
                 </div>
               </details>
             ))}
@@ -80,14 +82,14 @@ function renderContent(content: string) {
           {items.map((item, j) => (
             <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
               <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-              <span dangerouslySetInnerHTML={{ __html: bold(item) }} />
+              <span dangerouslySetInnerHTML={{ __html: renderInline(item) }} />
             </li>
           ))}
         </ul>
       );
       continue;
     } else {
-      elements.push(<p key={i} className="font-body text-sm text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: bold(line) }} />);
+      elements.push(<p key={i} className="font-body text-sm text-muted-foreground leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: renderInline(line) }} />);
     }
     i++;
   }
