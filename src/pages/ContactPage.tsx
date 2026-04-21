@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -10,7 +10,7 @@ const practitioners = [
     phone: "07 82 38 66 21",
     tel: "tel:+33782386621",
     email: "eric.gata@gmail.com",
-    mailto: "mailto:eric.gata@gmail.com",
+    apiKey: import.meta.env.VITE_WEB3FORMS_ERIC as string,
     schedule: [
       { day: "Lundi", hours: "9h30–12h30 · 15h00–17h30" },
       { day: "Mardi", hours: "9h30–12h30 · 15h00–17h30" },
@@ -25,13 +25,144 @@ const practitioners = [
     phone: "07 83 35 88 69",
     tel: "tel:+33783358869",
     email: "sylvia.rui33@gmail.com",
-    mailto: "mailto:sylvia.rui33@gmail.com",
+    apiKey: import.meta.env.VITE_WEB3FORMS_SYLVIA as string,
     schedule: [
       { day: "Mercredi", hours: "13h00–18h00" },
       { day: "Jeudi", hours: "13h00–18h00" },
     ],
   },
 ];
+
+type FormState = "idle" | "sending" | "success" | "error";
+
+function ContactForm({ practitioner }: { practitioner: typeof practitioners[0] }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<FormState>("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: practitioner.apiKey,
+          name,
+          email,
+          phone,
+          message,
+          subject: `Nouveau message pour ${practitioner.name} — neurofeedback-stress.fr`,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setName(""); setEmail(""); setPhone(""); setMessage("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  const inputClass = "w-full font-body text-sm text-foreground bg-background border border-border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-colors placeholder:text-muted-foreground/60";
+
+  return (
+    <div className="bg-background rounded-2xl border border-border p-6">
+      <div className="flex items-center gap-3 mb-5">
+        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-display text-primary font-semibold text-sm">
+          {practitioner.initials}
+        </div>
+        <h3 className="font-display text-xl font-semibold text-foreground">{practitioner.name}</h3>
+      </div>
+
+      {/* Schedule */}
+      <div className="rounded-xl overflow-hidden border border-border mb-5">
+        {practitioner.schedule.map((s, i) => (
+          <div
+            key={s.day}
+            className={`flex justify-between px-4 py-2.5 font-body text-sm ${i % 2 === 0 ? "bg-secondary/50" : "bg-background"}`}
+          >
+            <span className="text-muted-foreground">{s.day}</span>
+            <span className="text-foreground font-medium">{s.hours}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Téléphone */}
+      <a
+        href={practitioner.tel}
+        className="w-full inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300 mb-5"
+      >
+        <Phone size={14} /> {practitioner.phone}
+      </a>
+
+      {/* Formulaire */}
+      {status === "success" ? (
+        <div className="flex items-center gap-3 bg-secondary rounded-xl px-5 py-4">
+          <CheckCircle size={18} className="text-primary flex-shrink-0" />
+          <p className="font-body text-sm text-foreground">Message envoyé ! {practitioner.name} vous répondra sous 24h.</p>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <input
+            type="text"
+            required
+            placeholder="Votre nom"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            className={inputClass}
+          />
+          <input
+            type="email"
+            required
+            placeholder="Votre email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            className={inputClass}
+          />
+          <input
+            type="tel"
+            placeholder="Votre téléphone (facultatif)"
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            className={inputClass}
+          />
+          <textarea
+            required
+            placeholder="Votre message..."
+            rows={4}
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            className={`${inputClass} resize-none`}
+          />
+
+          {status === "error" && (
+            <div className="flex items-center gap-2 text-destructive font-body text-xs">
+              <AlertCircle size={14} />
+              Une erreur est survenue, réessayez ou appelez directement.
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="w-full inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            <Send size={14} />
+            {status === "sending" ? "Envoi en cours…" : "Envoyer le message"}
+          </button>
+        </form>
+      )}
+    </div>
+  );
+}
 
 export default function ContactPage() {
   useEffect(() => {
@@ -64,7 +195,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Practitioners */}
+      {/* Formulaires */}
       <section className="py-16 bg-secondary/30 border-b border-border">
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="font-display text-3xl font-light text-foreground mb-10 text-center">
@@ -72,48 +203,7 @@ export default function ContactPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {practitioners.map((p) => (
-              <div key={p.name} className="bg-background rounded-2xl border border-border p-6">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-display text-primary font-semibold text-sm">
-                    {p.initials}
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground">{p.name}</h3>
-                </div>
-
-                {/* Schedule */}
-                <div className="rounded-xl overflow-hidden border border-border mb-5">
-                  {p.schedule.map((s, i) => (
-                    <div
-                      key={s.day}
-                      className={`flex justify-between px-4 py-2.5 font-body text-sm ${i % 2 === 0 ? "bg-secondary/50" : "bg-background"}`}
-                    >
-                      <span className="text-muted-foreground">{s.day}</span>
-                      <span className="text-foreground font-medium">{s.hours}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Contact actions */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={p.tel}
-                    className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300"
-                  >
-                    <Phone size={14} /> {p.phone}
-                  </a>
-                  <a
-                    href={p.mailto}
-                    className="flex-1 inline-flex items-center justify-center gap-2 font-body text-sm tracking-wide px-5 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                  >
-                    <Mail size={14} /> Envoyer un email
-                  </a>
-                </div>
-
-                {/* Email affiché en clair */}
-                <p className="font-body text-xs text-muted-foreground mt-3 text-center">
-                  {p.email}
-                </p>
-              </div>
+              <ContactForm key={p.name} practitioner={p} />
             ))}
           </div>
         </div>
@@ -124,7 +214,6 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-start">
 
-            {/* Info + Map */}
             <div>
               <h2 className="font-display text-4xl font-light text-foreground mb-8">Nous trouver</h2>
               <div className="space-y-4 mb-8">
@@ -162,7 +251,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Première séance + réassurance */}
             <div className="space-y-6">
               <h2 className="font-display text-4xl font-light text-foreground">Première séance</h2>
               <div className="bg-gradient-section rounded-2xl p-7 border border-border">
@@ -184,30 +272,6 @@ export default function ContactPage() {
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                       </div>
                       {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-card rounded-2xl p-7 border border-border shadow-soft">
-                <p className="font-body text-sm text-muted-foreground mb-5 leading-relaxed">
-                  Choisissez votre praticien et contactez-le directement par téléphone ou email :
-                </p>
-                <div className="space-y-4">
-                  {practitioners.map((p) => (
-                    <div key={p.name} className="flex items-center justify-between py-3 border-b border-border last:border-0">
-                      <div>
-                        <span className="font-body text-sm font-medium text-foreground block">{p.name}</span>
-                        <span className="font-body text-xs text-muted-foreground">{p.email}</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <a href={p.tel} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Appeler ${p.name}`}>
-                          <Phone size={14} className="text-primary" />
-                        </a>
-                        <a href={p.mailto} className="w-9 h-9 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors" title={`Écrire à ${p.name}`}>
-                          <Mail size={14} className="text-primary" />
-                        </a>
-                      </div>
                     </div>
                   ))}
                 </div>
