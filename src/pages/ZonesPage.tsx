@@ -1,9 +1,11 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cities } from "@/components/LocalSEO";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, ArrowRight } from "lucide-react";
 import CTAButtons from "@/components/CTAButtons";
+import { cityPages } from "@/data/cityPages";
 
 export default function ZonesPage() {
   useEffect(() => {
@@ -48,6 +50,23 @@ export default function ZonesPage() {
                 <Phone size={13} /> 07 82 38 66 21
               </a>
             </div>
+          </div>
+
+          {/* Villes principales avec pages dédiées */}
+          <div className="grid md:grid-cols-3 gap-4 mb-12">
+            {cityPages.map((city) => (
+              <Link
+                key={city.slug}
+                to={`/${city.slug}`}
+                className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="font-display text-xl font-semibold text-foreground group-hover:text-primary transition-colors">{city.name}</span>
+                  <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+                <span className="font-body text-xs text-muted-foreground">{city.distance} du cabinet</span>
+              </Link>
+            ))}
           </div>
 
           <h2 className="font-display text-3xl font-light text-foreground mb-6">

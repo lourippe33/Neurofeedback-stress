@@ -39,6 +39,44 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Pages locales par ville -->
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-bordeaux</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-merignac</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-pessac</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-cenon</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-lormont</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neurofeedback-stress.fr/neurofeedback-floirac</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Articles de blog -->
   <url>
     <loc>https://www.neurofeedback-stress.fr/blog/neurofeedback-sommeil-nuits-reparatrices</loc>

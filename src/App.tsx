@@ -11,6 +11,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogPost from "./pages/BlogPost";
 import PricingPage from "./pages/PricingPage";
 import ZonesPage from "./pages/ZonesPage";
+import CityPage from "./pages/CityPage";
 import MentionsLegalesPage from "./pages/MentionsLegalesPage";
 import PolitiqueConfidentialitePage from "./pages/PolitiqueConfidentialitePage";
 import CGVPage from "./pages/CGVPage";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/blog/bien-etre-cancer" element={<Navigate to="/blog/neurofeedback-bien-etre-epreuves-de-vie" replace />} />
           <Route path="/tarifs" element={<PricingPage />} />
           <Route path="/zones" element={<ZonesPage />} />
+          <Route path="/:citySlug" element={<CityPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
           <Route path="/cgv" element={<CGVPage />} />
