@@ -12,7 +12,11 @@ function escapeHtml(str: string) {
 function renderInline(text: string) {
   return escapeHtml(text)
     .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground font-medium">$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">$1</a>');
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, url) => {
+      const isExternal = url.startsWith('http');
+      const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return `<a href="${url}"${attrs} class="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">${text}</a>`;
+    });
 }
 
 function renderContent(content: string) {

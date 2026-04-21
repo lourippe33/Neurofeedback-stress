@@ -60,7 +60,7 @@ Le cerveau, naturellement orienté vers l'efficacité, ajuste alors son fonction
 
 Ce n'est pas de la relaxation guidée. Ce n'est pas de l'hypnose. Vous n'avez rien à faire, rien à penser, rien à visualiser. Vous vous installez dans un fauteuil confortable, vous écoutez de la musique ou regardez une vidéo, et le système travaille avec votre cerveau en arrière-plan.
 
-Le protocole NeurOptimal® est une version avancée et entièrement personnalisée de cette approche : il s'adapte à chaque cerveau, séance après séance, sans protocole prédéfini. C'est l'une des méthodes les plus respectueuses du fonctionnement naturel du cerveau.
+Le protocole [NeurOptimal®](https://www.neuroptimal.com) est une version avancée et entièrement personnalisée de cette approche : il s'adapte à chaque cerveau, séance après séance, sans protocole prédéfini. C'est l'une des méthodes les plus respectueuses du fonctionnement naturel du cerveau. Eric et Sylvia sont praticiens certifiés, membres de l'[ADNF](https://www.adnf.org/) — Association pour le Développement du Neurofeedback en France.
 
 ## Comment le neurofeedback peut-il améliorer votre sommeil ?
 
@@ -194,7 +194,7 @@ Le cerveau, naturellement orienté vers l'efficacité, ajuste alors son fonction
 
 Ce n'est pas de la relaxation. Ce n'est pas du coaching. Vous n'avez rien à "faire" pendant la séance — ni exercice, ni visualisation, ni travail sur vos pensées. Vous vous installez, vous vous laissez aller, et le cerveau fait son travail.
 
-Le protocole NeurOptimal® est une version avancée et entièrement personnalisée de cette approche. Chaque séance dure 33 minutes, pendant lesquelles vous vous détendez simplement.
+Le protocole [NeurOptimal®](https://www.neuroptimal.com) est une version avancée et entièrement personnalisée de cette approche. Chaque séance dure 33 minutes, pendant lesquelles vous vous détendez simplement.
 
 ## En quoi le neurofeedback est-il particulièrement adapté au stress au travail ?
 
@@ -326,7 +326,7 @@ Pour certaines personnes, malgré tous les efforts, le cercle vicieux persiste. 
 
 ## Le neurofeedback dynamique : accompagner le cerveau à la source
 
-Le neurofeedback NeurOptimal® est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
+Le [neurofeedback NeurOptimal®](https://www.neuroptimal.com) est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
 
 Le cerveau, naturellement orienté vers l'efficacité, s'ajuste alors de lui-même. **Sans effort de votre part. Sans médicaments. Sans dépendance.**
 
@@ -441,7 +441,7 @@ C'est souvent le signe que le cerveau a besoin d'un soutien plus direct — non 
 
 ## Le neurofeedback : un soutien doux pour les moments fragiles
 
-Le neurofeedback NeurOptimal® est une approche d'entraînement cérébral naturelle, passive et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
+Le [neurofeedback NeurOptimal®](https://www.neuroptimal.com) est une approche d'entraînement cérébral naturelle, passive et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
 
 Le cerveau s'ajuste alors de lui-même, **sans effort conscient de votre part**.
 
@@ -548,7 +548,7 @@ C'est précisément là que le neurofeedback peut jouer un rôle complémentaire
 
 ## Le neurofeedback : accompagner le cerveau à retrouver son équilibre
 
-Le neurofeedback NeurOptimal® est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
+Le [neurofeedback NeurOptimal®](https://www.neuroptimal.com) est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
 
 Le cerveau s'ajuste alors de lui-même. **Sans effort de votre part. Sans médicaments. Sans dépendance.**
 
@@ -663,7 +663,7 @@ Le cerveau a besoin d'un accompagnement actif pour retrouver sa capacité à mai
 
 ## Le neurofeedback : ré-entraîner le cerveau à se concentrer
 
-Le neurofeedback NeurOptimal® est une approche d'entraînement cérébral naturelle et non invasive. Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
+Le [neurofeedback NeurOptimal®](https://www.neuroptimal.com) est une approche d'entraînement cérébral naturelle et non invasive, référencée par l'[ADNF](https://www.adnf.org/). Des capteurs posés sur la tête lisent le fonctionnement du cerveau en temps réel. Lorsqu'une instabilité est détectée, un signal sonore discret — une légère interruption dans la musique que vous écoutez — en informe le cerveau subtilement.
 
 Le cerveau, naturellement orienté vers l'efficacité, s'ajuste alors de lui-même. **Sans effort conscient. Sans médicaments. Sans dépendance.**
 
